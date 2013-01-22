@@ -36,13 +36,13 @@
     [tableView setBackgroundColor:[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:0.5]];
     
   [self.view addSubview:tableView];
-    
+    [self backButton];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
     [self.navigationController.navigationBar setAlpha:0.5];
 	// Do any additional setup after loading the view.
 }
--(void)loadnewQuad:(NSArray *)result{
-    theQuad=[result objectAtIndex:0];
+-(void)loadnewQuad:(Quad *)result{
+    theQuad=result;
     
     [self setTitle:[theQuad LocationName]];
     
@@ -77,7 +77,27 @@
     [self.navigationController pushViewController:newView animated:YES];
     
 }
-
+-(void)removeView:(id)sender
+{
+    [self.navigationController.view removeFromSuperview];
+    
+}
+-(void)backButton
+{
+   /* UIButton *but=[UIButton buttonWithType:UIButtonTypeCustom];
+    but.frame=CGRectMake(10,50, 100, 40);
+    [but setTitle:@"< back" forState:UIControlStateNormal];
+    [but addTarget:self action:@selector(removeView:) forControlEvents:UIControlEventTouchDown];
+    [but  setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:but];*/
+    UIBarButtonItem *HomeButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Home"
+                                   style:UIBarButtonItemStyleBordered
+                                   target:self
+                                   action:@selector(removeView:)];
+    self.navigationItem.rightBarButtonItem=HomeButton;
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

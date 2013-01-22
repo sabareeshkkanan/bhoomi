@@ -10,6 +10,7 @@
 
 @implementation Quad
 @synthesize AltName,LocationName,LocationType,user,Tags,events,finalResult,Q_id;
+@synthesize button,delegate,minimumdistance;
 
 -(void)setvalue:(Location*)p1:(Location*)p2:(Location*)p3:(Location*)p4
 {
@@ -19,6 +20,7 @@
     events=[[NSMutableArray alloc]init];
     
     LargeAngle=[[NSNumber alloc] initWithFloat:-360.0];
+    buttonX=[[NSNumber alloc] initWithFloat:0];
     Selected1=0;
     Seleceted2=0;
    
@@ -34,6 +36,11 @@
     Tags=[data valueForKey:@"Tags"];
     user=[data valueForKey:@"user"];
     [self populateEvents:[data valueForKey:@"events"]];
+    [self newButton:LocationName];
+    
+    
+    
+    
     return self;
 }
 
@@ -65,46 +72,30 @@
   
 }
 //------------------------------------------------------------------------------------------------
--(double)line:(CLLocation*)x:(CLLocation*)y:(CLLocation*)pt{
-    double equ=0;
-    double diff=0;
-    if(x.coordinate.longitude==y.coordinate.longitude)
-    {
-        equ=pt.coordinate.longitude-x.coordinate.longitude;
-    }
-    else
-    {
-        diff=(y.coordinate.latitude-x.coordinate.latitude)/(y.coordinate.longitude-x.coordinate.longitude);
-        equ=(pt.coordinate.latitude-x.coordinate.latitude)-((diff)*(pt.coordinate.longitude-x.coordinate.longitude));
-    }
-    return  equ;
-}
+
 -(BOOL)inside:(CLLocation*)DeviceLocation{
-    double eq1=[self line:[[location objectAtIndex:0] point] :[[location objectAtIndex:1] point] :DeviceLocation];
-    double eq2=[self line:[[location objectAtIndex:1] point] :[[location objectAtIndex:2] point] :DeviceLocation];
-    double eq3=[self line:[[location objectAtIndex:2] point] :[[location objectAtIndex:3] point] :DeviceLocation];
-    double eq4=[self line:[[location objectAtIndex:3] point] :[[location objectAtIndex:0] point] :DeviceLocation];
-    if(eq1>0&&eq2>0&&eq3<0&&eq4<0)
-        return true;
-    return false;
-}
+    return [[ARPointInPoly alloc] pnpoly:location:DeviceLocation ];
+    
+    }
 
 -(void)calculateAngle:(CLLocation*)currentLocation{
    for(Location* pt in location)
         [pt calculateAngle:currentLocation];
 }
--(void)displayAngle:(double)heading{
+-(void)ComputeByHeading:(double)heading{
+    if(!InsideQuad)
+    {
     [self calculateDifference:heading];
     [self analyzeResult];
-finalResult=[NSArray arrayWithObjects:LargeAngle,state,[NSNumber numberWithFloat:a1],[NSNumber numberWithFloat:a2],minimumdistance, nil];
+    [self ButtonLocation];
+finalResult=[NSArray arrayWithObjects:state,buttonX,minimumdistance, nil];
+    }
     
 }
 -(void)analyzeResult{
      a1=[[location objectAtIndex:Selected1] Difference_];
      a2=[[location objectAtIndex:Seleceted2] Difference_];
    angleAnalyzer *analyzer=[[angleAnalyzer alloc] Analyze:[LargeAngle floatValue] :a1 :a2];
-    a1=[analyzer Angle];
-    
     state=[NSNumber numberWithInt:[analyzer State]];
     [self calculateMinimumDistance];
    }
@@ -119,8 +110,8 @@ finalResult=[NSArray arrayWithObjects:LargeAngle,state,[NSNumber numberWithFloat
     for(Location* pt in location)
         [pt calculateDifference:heading];
 }
--(void)MaximumAngle:(CLLocation*)currentLocation{
-    LargeAngle=[NSNumber numberWithFloat:0.0];
+-(void)ComputeByGps:(CLLocation*)currentLocation{
+    LargeAngle=[NSNumber numberWithFloat:-360.0];
     [self calculateAngle:currentLocation];
 
     if(![self inside:currentLocation]){
@@ -131,17 +122,17 @@ finalResult=[NSArray arrayWithObjects:LargeAngle,state,[NSNumber numberWithFloat
     [self angleA:currentLocation :[[location objectAtIndex:1] point] : [[location objectAtIndex:2] point]:1 :2];
     [self angleA:currentLocation :[[location objectAtIndex:1] point] : [[location objectAtIndex:3] point]:1 :3];
     [self angleA:currentLocation :[[location objectAtIndex:2] point] : [[location objectAtIndex:3] point]:2 :3];
-      
-
     }
+    else
+        InsideQuad=TRUE;
   
 }
 -(void)angleA:(CLLocation*)A:(CLLocation*)B:(CLLocation*)C:(int)bb:(int)cc
 {
     double a=[B distanceFromLocation:C];
-    if(a==0 && [LargeAngle floatValue]==0.0)
+    if(a==0 && ([LargeAngle floatValue]==0.0||[LargeAngle floatValue]==-360.0))
     {
-     //   LargeAngle=[NSNumber numberWithDouble:0.0];
+       LargeAngle=[NSNumber numberWithDouble:0.0];
         Selected1=bb;
         Seleceted2=cc;
         return;
@@ -163,6 +154,41 @@ finalResult=[NSArray arrayWithObjects:LargeAngle,state,[NSNumber numberWithFloat
 {
     return radians * 180 / M_PI;
 }
-
+-(void)newButton:(NSString*)title
+{
+    
+    button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button addTarget:self action:@selector(calldelegate:) forControlEvents:UIControlEventTouchDown];
+    
+    [button setTitle:title forState:UIControlStateNormal];
+}
+-(void)ButtonLocation
+{
+    if([state intValue]>0)
+    {
+       
+        float range=([LargeAngle floatValue]/2)+22.5;
+        float average=(a1+a2)/2;
+        float factor=760/range;
+        
+       buttonX=[NSNumber numberWithFloat:(average*factor)+380];
+       
+    }
+           else
+    {
+        buttonX=[NSNumber numberWithFloat:-200];
+    }
+}
+-(void)buttonPriority:(int)y
+{
+    if(!InsideQuad)
+        button.frame=CGRectMake([buttonX floatValue], y, 160, 40);
+    else
+        button.frame=CGRectMake(540, 50, 160, 40);
+}
+-(void)calldelegate:(id)sender
+{
+    [delegate buttonTouch:self];
+}
 
 @end

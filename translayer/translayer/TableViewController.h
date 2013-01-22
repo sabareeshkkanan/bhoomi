@@ -19,5 +19,5 @@
 @property(nonatomic,strong)Quad *theQuad;
 @property(nonatomic,retain)UITableView *tableView;
 
--(void)loadnewQuad:(NSArray *)result;
+-(void)loadnewQuad:(Quad *)result;
 @end

@@ -207,19 +207,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "translayer/ARViewController.m"
-         timestampString = "379525970.191936"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "31"
-         endingLineNumber = "31"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "translayer/GLViewController.m"
          timestampString = "380001497.499332"
          startingColumnNumber = "9223372036854775807"
@@ -557,11 +544,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "375488110.297"
+         timestampString = "380527013.453659"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "31"
-         endingLineNumber = "31"
+         startingLineNumber = "33"
+         endingLineNumber = "33"
          landmarkName = "-initwithdata:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -713,7 +700,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "translayer/TableViewController.m"
-         timestampString = "375433850.757886"
+         timestampString = "380531439.922068"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "44"
@@ -726,7 +713,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "translayer/TableViewController.m"
-         timestampString = "379487117.635619"
+         timestampString = "380531439.922068"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "64"
@@ -739,7 +726,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "translayer/TableViewController.m"
-         timestampString = "379487117.635619"
+         timestampString = "380531439.922068"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "70"
@@ -752,7 +739,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "translayer/TableViewController.m"
-         timestampString = "379487117.635619"
+         timestampString = "380531439.922068"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "75"
@@ -765,7 +752,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "translayer/TableViewController.m"
-         timestampString = "379487117.635619"
+         timestampString = "380531439.922068"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "61"
@@ -856,11 +843,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "375819449.808983"
+         timestampString = "380572137.532618"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "94"
-         endingLineNumber = "94"
+         startingLineNumber = "83"
+         endingLineNumber = "83"
          landmarkName = "-calculateAngle:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -869,12 +856,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "380494982.990688"
+         timestampString = "380580041.126806"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "138"
-         endingLineNumber = "138"
-         landmarkName = "-MaximumAngle:"
+         startingLineNumber = "129"
+         endingLineNumber = "129"
+         landmarkName = "-ComputeByGps:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -882,11 +869,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "380494982.990688"
+         timestampString = "380580041.126806"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "150"
-         endingLineNumber = "150"
+         startingLineNumber = "141"
+         endingLineNumber = "141"
          landmarkName = "-angleA:::::"
          landmarkType = "5">
       </FileBreakpoint>
@@ -895,11 +882,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "angleAnalyzer.m"
-         timestampString = "380494982.990688"
+         timestampString = "380566476.929652"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "66"
-         endingLineNumber = "66"
+         startingLineNumber = "70"
+         endingLineNumber = "70"
          landmarkName = "-different"
          landmarkType = "5">
       </FileBreakpoint>
@@ -908,11 +895,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "angleAnalyzer.m"
-         timestampString = "380494982.990688"
+         timestampString = "380566476.929652"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
          landmarkName = "-bothnegative"
          landmarkType = "5">
       </FileBreakpoint>
@@ -959,26 +946,13 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
+         filePath = "Quad.m"
+         timestampString = "380580041.126806"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "82"
-         endingLineNumber = "82"
-         landmarkName = "-bestAngle"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "80"
-         endingLineNumber = "80"
-         landmarkName = "-bestAngle"
+         startingLineNumber = "117"
+         endingLineNumber = "117"
+         landmarkName = "-ComputeByGps:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -986,12 +960,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "380494982.990688"
+         timestampString = "380580041.126806"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "126"
-         endingLineNumber = "126"
-         landmarkName = "-MaximumAngle:"
+         startingLineNumber = "119"
+         endingLineNumber = "119"
+         landmarkName = "-ComputeByGps:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -999,24 +973,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "380494982.990688"
+         timestampString = "380580041.126806"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "128"
-         endingLineNumber = "128"
-         landmarkName = "-MaximumAngle:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Quad.m"
-         timestampString = "380494982.990688"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "156"
-         endingLineNumber = "156"
+         startingLineNumber = "147"
+         endingLineNumber = "147"
          landmarkName = "-angleA:::::"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1025,11 +986,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "380494982.990688"
+         timestampString = "380580041.126806"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "155"
-         endingLineNumber = "155"
+         startingLineNumber = "146"
+         endingLineNumber = "146"
          landmarkName = "-angleA:::::"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1038,11 +999,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "380494982.990688"
+         timestampString = "380580041.126806"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "157"
-         endingLineNumber = "157"
+         startingLineNumber = "148"
+         endingLineNumber = "148"
          landmarkName = "-angleA:::::"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1051,124 +1012,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "375488110.297"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "30"
-         endingLineNumber = "30"
-         landmarkName = "-initwithdata:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Quad.m"
-         timestampString = "375488110.297"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "29"
-         endingLineNumber = "29"
-         landmarkName = "-initwithdata:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "77"
-         endingLineNumber = "77"
-         landmarkName = "-bestAngle"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Quad.m"
-         timestampString = "375819449.808983"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "104"
-         endingLineNumber = "104"
-         landmarkName = "-analyzeResult"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Quad.m"
-         timestampString = "375819449.808983"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99"
-         landmarkName = "-displayAngle:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Quad.m"
-         timestampString = "375819449.808983"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "101"
-         endingLineNumber = "101"
-         landmarkName = "-displayAngle:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "translayer/ARViewController.m"
-         timestampString = "380492437.804676"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "63"
-         endingLineNumber = "63"
-         landmarkName = "-results:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "translayer/ARViewController.m"
-         timestampString = "380492437.804676"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "64"
-         endingLineNumber = "64"
-         landmarkName = "-results:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "translayer/ARViewController.m"
-         timestampString = "380492437.804676"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "66"
-         endingLineNumber = "66"
-         landmarkName = "-results:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Quad.m"
-         timestampString = "375488175.498547"
+         timestampString = "380527013.453659"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "32"
@@ -1180,13 +1024,65 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
+         filePath = "Quad.m"
+         timestampString = "380527013.453659"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "75"
-         endingLineNumber = "75"
-         landmarkName = "-bestAngle"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
+         landmarkName = "-initwithdata:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Quad.m"
+         timestampString = "380580041.126806"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "97"
+         endingLineNumber = "97"
+         landmarkName = "-analyzeResult"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Quad.m"
+         timestampString = "380580041.126806"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "91"
+         endingLineNumber = "91"
+         landmarkName = "-ComputeByHeading:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Quad.m"
+         timestampString = "380580041.126806"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "94"
+         endingLineNumber = "94"
+         landmarkName = "-ComputeByHeading:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Quad.m"
+         timestampString = "380527013.453659"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
+         landmarkName = "-initwithdata:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1194,11 +1090,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
+         timestampString = "380530089.341006"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "58"
-         endingLineNumber = "58"
+         startingLineNumber = "60"
+         endingLineNumber = "60"
          landmarkName = "-analyzer"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1207,11 +1103,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
+         timestampString = "380530089.341006"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "61"
-         endingLineNumber = "61"
+         startingLineNumber = "63"
+         endingLineNumber = "63"
          landmarkName = "-analyzer"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1220,11 +1116,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380491604.02361"
+         timestampString = "380574475.670601"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "129"
-         endingLineNumber = "129"
+         startingLineNumber = "91"
+         endingLineNumber = "91"
          landmarkName = "-analyzeQuad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1233,11 +1129,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380491604.02361"
+         timestampString = "380574475.670601"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "131"
-         endingLineNumber = "131"
+         startingLineNumber = "93"
+         endingLineNumber = "93"
          landmarkName = "-analyzeQuad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1246,12 +1142,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "380494982.990688"
+         timestampString = "380580041.126806"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "123"
-         endingLineNumber = "123"
-         landmarkName = "-MaximumAngle:"
+         startingLineNumber = "114"
+         endingLineNumber = "114"
+         landmarkName = "-ComputeByGps:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1272,11 +1168,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "375808298.686587"
+         timestampString = "380572137.532618"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "48"
-         endingLineNumber = "48"
+         startingLineNumber = "55"
+         endingLineNumber = "55"
          landmarkName = "-addEventsFromCalendar:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1285,11 +1181,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "375813297.291323"
+         timestampString = "380572137.532618"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "50"
-         endingLineNumber = "50"
+         startingLineNumber = "57"
+         endingLineNumber = "57"
          landmarkName = "-addEventsFromCalendar:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1350,51 +1246,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
+         timestampString = "380530089.341006"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "50"
-         endingLineNumber = "50"
+         startingLineNumber = "54"
+         endingLineNumber = "54"
          landmarkName = "-QuadChanged:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "47"
-         endingLineNumber = "47"
-         landmarkName = "-QuadChanged:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "translayer/ARViewController.m"
-         timestampString = "380492437.804676"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "62"
-         endingLineNumber = "62"
-         landmarkName = "-results:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380491604.02361"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "87"
-         endingLineNumber = "87"
-         landmarkName = "-bestAngle"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1505,91 +1362,39 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
+         filePath = "angleAnalyzer.m"
+         timestampString = "380566476.929652"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "84"
-         endingLineNumber = "84"
-         landmarkName = "-bestAngle"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
+         landmarkName = "-different"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
+         filePath = "angleAnalyzer.m"
+         timestampString = "380566476.929652"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "83"
          endingLineNumber = "83"
-         landmarkName = "-bestAngle"
+         landmarkName = "-different"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
+         filePath = "angleAnalyzer.m"
+         timestampString = "380566476.929652"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "81"
          endingLineNumber = "81"
-         landmarkName = "-bestAngle"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "angleAnalyzer.m"
-         timestampString = "380494982.990688"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "69"
-         endingLineNumber = "69"
          landmarkName = "-different"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "angleAnalyzer.m"
-         timestampString = "380494982.990688"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "79"
-         endingLineNumber = "79"
-         landmarkName = "-different"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "angleAnalyzer.m"
-         timestampString = "380494982.990688"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "77"
-         endingLineNumber = "77"
-         landmarkName = "-different"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "translayer/ARViewController.m"
-         timestampString = "380492437.804676"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "67"
-         endingLineNumber = "67"
-         landmarkName = "-results:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1688,11 +1493,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
+         timestampString = "380530089.341006"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "31"
-         endingLineNumber = "31"
+         startingLineNumber = "33"
+         endingLineNumber = "33"
          landmarkName = "-init:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1701,11 +1506,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "translayer/ARQuadAnalyze.m"
-         timestampString = "380488336.56219"
+         timestampString = "380530089.341006"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "30"
-         endingLineNumber = "30"
+         startingLineNumber = "32"
+         endingLineNumber = "32"
          landmarkName = "-init:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1831,11 +1636,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Quad.m"
-         timestampString = "380494982.990688"
+         timestampString = "380580041.126806"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "159"
-         endingLineNumber = "159"
+         startingLineNumber = "150"
+         endingLineNumber = "150"
          landmarkName = "-angleA:::::"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1844,11 +1649,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "angleAnalyzer.m"
-         timestampString = "380494982.990688"
+         timestampString = "380566476.929652"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "81"
-         endingLineNumber = "81"
+         startingLineNumber = "85"
+         endingLineNumber = "85"
          landmarkName = "-different"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1857,12 +1662,116 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "angleAnalyzer.m"
-         timestampString = "380494982.990688"
+         timestampString = "380566476.929652"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "70"
-         endingLineNumber = "70"
+         startingLineNumber = "74"
+         endingLineNumber = "74"
          landmarkName = "-different"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "translayer/ARQuadAnalyze.m"
+         timestampString = "380574475.670601"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "122"
+         endingLineNumber = "122"
+         landmarkName = "-buttonTouch:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Quad.m"
+         timestampString = "380580041.126806"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "191"
+         endingLineNumber = "191"
+         landmarkName = "-calldelegate:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "translayer/TableViewController.m"
+         timestampString = "380531439.922068"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "83"
+         endingLineNumber = "83"
+         landmarkName = "-removeView:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "ARPointInPoly.m"
+         timestampString = "380570752.783832"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
+         landmarkName = "-pnpoly::"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Quad.m"
+         timestampString = "380572137.532618"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "78"
+         endingLineNumber = "78"
+         landmarkName = "-inside:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "ARPointInPoly.m"
+         timestampString = "380570902.775832"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
+         landmarkName = "-pnpoly::"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "translayer/ARViewController.h"
+         timestampString = "380574475.670601"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "22"
+         endingLineNumber = "22"
+         landmarkName = "@interface ARViewController"
+         landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Quad.m"
+         timestampString = "380574502.875098"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "77"
+         endingLineNumber = "77"
+         landmarkName = "-inside:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

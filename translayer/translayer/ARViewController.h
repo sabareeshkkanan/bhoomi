@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Camera.h"
-
-#import "TableViewController.h"
-
 #import "ARQuadAnalyze.h"
 
-@interface ARViewController : UIViewController<resultchange>
+@interface ARViewController : UIViewController
 {
       
     Camera *captureManager;

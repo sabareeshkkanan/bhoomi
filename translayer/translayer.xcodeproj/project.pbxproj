@@ -50,6 +50,7 @@
 		6353F05C1653EB51005DCE6B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6353F05B1653EB51005DCE6B /* CoreLocation.framework */; };
 		6353F05E1653EB5C005DCE6B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6353F05D1653EB5C005DCE6B /* CoreMotion.framework */; };
 		6353F0601653EB70005DCE6B /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6353F05F1653EB70005DCE6B /* EventKit.framework */; };
+		637123CC16AF040F001F5AC5 /* ARPointInPoly.m in Sources */ = {isa = PBXBuildFile; fileRef = 637123CB16AF040F001F5AC5 /* ARPointInPoly.m */; };
 		63B050BF164ED480000B9806 /* ARLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B050BE164ED480000B9806 /* ARLabel.m */; };
 		63B050D31650B763000B9806 /* ARCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B050D21650B763000B9806 /* ARCloud.m */; };
 		63B3BFA8164C562700BD62C7 /* ARVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3BFA7164C562700BD62C7 /* ARVideo.m */; };
@@ -129,6 +130,8 @@
 		6353F05B1653EB51005DCE6B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6353F05D1653EB5C005DCE6B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		6353F05F1653EB70005DCE6B /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		637123CA16AF040F001F5AC5 /* ARPointInPoly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPointInPoly.h; sourceTree = "<group>"; };
+		637123CB16AF040F001F5AC5 /* ARPointInPoly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARPointInPoly.m; sourceTree = "<group>"; };
 		63B050BD164ED480000B9806 /* ARLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARLabel.h; sourceTree = "<group>"; };
 		63B050BE164ED480000B9806 /* ARLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLabel.m; sourceTree = "<group>"; };
 		63B050D11650B763000B9806 /* ARCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCloud.h; sourceTree = "<group>"; };
@@ -218,6 +221,7 @@
 		630FC28A1621E52800942E4A /* translayer */ = {
 			isa = PBXGroup;
 			children = (
+				637123C816AE6BD1001F5AC5 /* Controllers */,
 				632BADD716569D86001423DA /* calendar */,
 				6353F0431653EA50005DCE6B /* sensors */,
 				63EFBCFF16880E2F0056D4C3 /* object Loader */,
@@ -228,15 +232,7 @@
 				630FC2931621E52800942E4A /* ARAppDelegate.h */,
 				630FC2941621E52800942E4A /* ARAppDelegate.m */,
 				630FC29F1621E52800942E4A /* MainStoryboard_iPad.storyboard */,
-				630FC2A21621E52800942E4A /* ARViewController.h */,
-				630FC2A31621E52800942E4A /* ARViewController.m */,
-				63E8742916611A400081D662 /* ARQuadAnalyze.h */,
-				63E8742A16611A400081D662 /* ARQuadAnalyze.m */,
 				630FC28B1621E52800942E4A /* Supporting Files */,
-				63F0B63A165DE4AD00B9D9A3 /* TableViewController.h */,
-				63F0B63B165DE4AD00B9D9A3 /* TableViewController.m */,
-				63F0B63E165DF3F100B9D9A3 /* DetailViewController.h */,
-				63F0B63F165DF3F100B9D9A3 /* DetailViewController.m */,
 			);
 			path = translayer;
 			sourceTree = "<group>";
@@ -278,6 +274,8 @@
 				632BADDD16569DDE001423DA /* Location.m */,
 				632BADDF16569E50001423DA /* Quad.h */,
 				632BADE016569E50001423DA /* Quad.m */,
+				637123CA16AF040F001F5AC5 /* ARPointInPoly.h */,
+				637123CB16AF040F001F5AC5 /* ARPointInPoly.m */,
 				63E8741A166068720081D662 /* angleAnalyzer.h */,
 				63E8741B166068720081D662 /* angleAnalyzer.m */,
 				632BADE216569EAF001423DA /* SensorData.h */,
@@ -287,6 +285,21 @@
 			);
 			name = sensors;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		637123C816AE6BD1001F5AC5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				63F0B63A165DE4AD00B9D9A3 /* TableViewController.h */,
+				63F0B63B165DE4AD00B9D9A3 /* TableViewController.m */,
+				630FC2A21621E52800942E4A /* ARViewController.h */,
+				630FC2A31621E52800942E4A /* ARViewController.m */,
+				63E8742916611A400081D662 /* ARQuadAnalyze.h */,
+				63E8742A16611A400081D662 /* ARQuadAnalyze.m */,
+				63F0B63E165DF3F100B9D9A3 /* DetailViewController.h */,
+				63F0B63F165DF3F100B9D9A3 /* DetailViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		63B050BB164ED461000B9806 /* objects */ = {
@@ -465,6 +478,7 @@
 				63066A3A168930F100D1A786 /* OpenGLWaveFrontGroup.m in Sources */,
 				63066A3B168930F100D1A786 /* OpenGLWaveFrontMaterial.m in Sources */,
 				63066A3C168930F100D1A786 /* OpenGLWaveFrontObject.m in Sources */,
+				637123CC16AF040F001F5AC5 /* ARPointInPoly.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

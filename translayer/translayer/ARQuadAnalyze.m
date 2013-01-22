@@ -9,33 +9,33 @@
 #import "ARQuadAnalyze.h"
 
 @implementation ARQuadAnalyze
-@synthesize locations,data,delegate;
+@synthesize locations,data;
 @synthesize wrapperView,glView,controller;
+@synthesize tableController,navController;
 -(id)init:(CGRect)dimension
 {
     if(self)
     {
         bound=dimension;
+        tableController=[[TableViewController alloc] init];
+        navController=[[UINavigationController alloc] initWithRootViewController:tableController];
         
-        mapButtons=[[NSMutableArray alloc] init];
+        data=[[SensorData alloc] init];
+        locations=[[GetLocation alloc] init];
         
         wrapperView=[[UIView alloc] initWithFrame:bound];
         buttonsView=[[UIView alloc] initWithFrame:bound];
         
-        locations=[[GetLocation alloc] init];
         [locations setDelegate:self];
-        data=[[SensorData alloc] init];
-        dualAngle=[[NSMutableArray alloc] init];
-         monoAngle=[[NSMutableArray alloc] init];
+     
+     
         [self setGl];
-        count=0;
         [NSTimer scheduledTimerWithTimeInterval:0.04
                                          target:self
                                        selector:@selector(analyzer)
                                        userInfo:nil
                                         repeats:YES];
         [wrapperView addSubview:buttonsView];
-        [buttonsView addSubview:[self newButton:@"test" :@"bad"]];
         
 
     }
@@ -45,11 +45,13 @@
 -(void)QuadChanged:(NSArray *)places
 {
     quads=[places objectAtIndex:0];
+    for(Quad* quad in quads)
+    {    [quad setDelegate:self];
+        [buttonsView addSubview:[quad button]];
+    }
     threeD=[[places objectAtIndex:1] valueForKey:@"obj"];
     for(NSArray* obj in threeD)
         [self performSelectorInBackground:@selector(new3d:) withObject:obj];
-   
-  
 }
 -(void)analyzer
 {
@@ -60,74 +62,34 @@
         [self.controller setSenseData:data];
         [glView drawView];
         
-      if(count>10)
-      {
+ 
     [self analyzeQuad];
-    [self bestAngle];
+    
     [self closest];
-          count=0;
-      }
-        count++;
+   
     }
 
 }
--(void)bestAngle
-{
-    [dualAngle removeAllObjects];
-    [monoAngle removeAllObjects];
-    for(Quad* quad in quads)
-    {
-        NSArray *final=[quad finalResult] ;
-        if([[final objectAtIndex:1] intValue]>2)
-        [dualAngle addObject:quad];
-        else if ([[final objectAtIndex:1] intValue]>0)
-            [monoAngle addObject:quad];
-        
-    }
 
-}
 -(void)closest
 {
-    float dist=10000;
-    Quad* quadT;
-    if([dualAngle count]>0)
-    {
-        for(Quad* quad in dualAngle)
-        {
-            if([[[quad finalResult] objectAtIndex:4] floatValue]<dist)
-            {
-                quadT=quad; dist=[[[quad finalResult] objectAtIndex:4] floatValue];
-            }
-        }
-        for(Quad* quad in monoAngle)
-        {
-            if([[[quad finalResult] objectAtIndex:4] floatValue]<dist && [[[quad finalResult] objectAtIndex:2] floatValue]<10 && [[[quad finalResult] objectAtIndex:2] floatValue]>-10)
-            {
-                quadT=quad; dist=[[[quad finalResult] objectAtIndex:4] floatValue];
-            }
-        }
-    }
-    else if ([monoAngle count]>0)
-    {
-        for(Quad* quad in monoAngle)
-        {
-            if([[[quad finalResult] objectAtIndex:4] floatValue]<dist)
-            {
-                quadT=quad; dist=[[[quad finalResult] objectAtIndex:4] floatValue];
-            }
-        }
-
-        
-    }
-    result=[[NSArray alloc] initWithObjects:quadT,[NSNumber numberWithFloat:dist] ,data,nil];
-    [delegate results:result];
+     NSSortDescriptor * sort = [[NSSortDescriptor alloc] initWithKey:@"minimumdistance" ascending:TRUE] ;
+    quads = [quads sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+    
+    int hcount=70;
+  for(Quad* quad in quads)
+  {
+      [quad buttonPriority:hcount];
+//      quad.button.frame=CGRectMake([[[quad finalResult] objectAtIndex:1] floatValue], hcount, 160.0, 40.0);
+      hcount+=50;
+  }
 }
 -(void)analyzeQuad{
     for(Quad* quad in quads)
     {
-       // [quad MaximumAngle:[data gps]];
-        [quad MaximumAngle:[[CLLocation alloc] initWithLatitude:33.13043115895641 longitude:-117.15774983167648]];
-        [quad displayAngle:[data heading]];
+       // [quad AngleByLocation:[data gps]];
+        [quad ComputeByGps:[[CLLocation alloc] initWithLatitude:33.13070069755159 longitude:-117.15790137648582]];
+        [quad ComputeByHeading:[data heading]];
     }
     
 }
@@ -152,23 +114,11 @@
     [[self controller] loader:Obj];
 }
 
--(UIButton*)newButton:(NSString*)title:(NSString*)_id
+-(void)buttonTouch:(id)quad
 {
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button addTarget:self action:@selector(aMethod:) forControlEvents:UIControlEventTouchDown];
-
-    [button setTitle:title forState:UIControlStateNormal];
-    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
-    button.tag=[mapButtons count];
-    [mapButtons addObject:_id];
-    return button;
+   
+    [tableController loadnewQuad:quad];
+    [wrapperView addSubview:navController.view];
     
 }
--(void)aMethod:(UIButton*)sender
-{
-        NSLog(@"%@",mapButtons[sender.tag]);
-}
-
-
 @end

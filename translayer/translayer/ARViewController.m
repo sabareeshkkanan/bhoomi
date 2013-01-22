@@ -25,16 +25,13 @@
     navController=[[UINavigationController alloc] initWithRootViewController:tableController];
     CGRect layerRect = [[[self view] layer] bounds];
     analyze=[[ARQuadAnalyze alloc] init:layerRect];
-    [analyze setDelegate:self];
     locationId=@"start";
    [self setcamera];
-          // buttons=[[UIView alloc] initWithFrame:layerRect];
 
     [self.view addSubview:[analyze wrapperView]];
 
     
-    [self.view addSubview:[navController view]];
-   
+
     
 }
 
@@ -58,21 +55,6 @@
 }
 
 
--(void)results:(NSArray *)result{
-    if([result count]==3)
-    if([[result objectAtIndex:1] floatValue]<10000)
-        if(![locationId isEqualToString:[[result objectAtIndex:0] Q_id]])
-        {
-             [tableController loadnewQuad:result];
-            locationId=[[result objectAtIndex:0] Q_id];
-        }
-    
-   
-}
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-   // [[analyze glView] startAnimation];
-    
-}
+
 
 @end

@@ -12,23 +12,18 @@
 #import "GLView.h"
 
 @class ARQuadAnalyze;
-@protocol resultchange <NSObject>
--(void)results:(NSArray*)result;
-@end
 
-@interface ARQuadAnalyze : NSObject<CloudUpdate>
+@interface ARQuadAnalyze : NSObject<CloudUpdate,buttonEvent>
 {
     GetLocation *locations;
     
-    NSMutableArray *mapButtons;
+
     
     NSArray *quads;
     NSArray *threeD;
     
-    NSMutableArray *dualAngle;
-     NSMutableArray *monoAngle;
+
     NSArray *result;
-    __weak id<resultchange> delegate;
     GLViewController *controller;
   
     GLView *glView ;
@@ -38,13 +33,14 @@
     
     CGRect bound;
     
-    int count;
+  
 }
-@property(nonatomic,weak)id<resultchange> delegate;
 @property UIView *wrapperView;
 @property(nonatomic,retain)GetLocation *locations;
 @property(nonatomic,retain)SensorData *data;
 
+@property(nonatomic,retain) UINavigationController *navController;
+@property(nonatomic,retain) TableViewController *tableController;
 
 @property (nonatomic, retain) GLViewController *controller;
 @property (nonatomic, retain) GLView *glView ;

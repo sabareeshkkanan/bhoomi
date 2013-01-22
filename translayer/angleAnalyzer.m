@@ -11,6 +11,10 @@
 @implementation angleAnalyzer
 -(id)Analyze:(float)Range :(float)Angle1 :(float)Angle2{
     range=Range;angle1=Angle1;angle2=Angle2;state=0;
+    if(Range==0.0)
+    {
+        state=1;return self;
+    }
     [self analyzer];
     return self;
 }
