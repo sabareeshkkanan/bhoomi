@@ -64,6 +64,23 @@
 		63F0B647165DFAAA00B9D9A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F0B646165DFAAA00B9D9A3 /* MediaPlayer.framework */; };
 		63F3B9CB165D928C006E22DE /* AREvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F3B9CA165D928C006E22DE /* AREvents.m */; };
 		63F3B9CF165D932B006E22DE /* ARMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F3B9CE165D932B006E22DE /* ARMedia.m */; };
+		63F624CC16B4BD1900148ACA /* .project in Resources */ = {isa = PBXBuildFile; fileRef = 63F624B816B4BD1900148ACA /* .project */; };
+		63F624CD16B4BD1900148ACA /* com.aptana.editor.php.prefs in Resources */ = {isa = PBXBuildFile; fileRef = 63F624BA16B4BD1900148ACA /* com.aptana.editor.php.prefs */; };
+		63F624CE16B4BD1900148ACA /* 3d.php in Resources */ = {isa = PBXBuildFile; fileRef = 63F624BC16B4BD1900148ACA /* 3d.php */; };
+		63F624CF16B4BD1900148ACA /* data.php in Resources */ = {isa = PBXBuildFile; fileRef = 63F624BD16B4BD1900148ACA /* data.php */; };
+		63F624D016B4BD1900148ACA /* DataBase.php in Resources */ = {isa = PBXBuildFile; fileRef = 63F624BE16B4BD1900148ACA /* DataBase.php */; };
+		63F624D116B4BD1900148ACA /* Events.php in Resources */ = {isa = PBXBuildFile; fileRef = 63F624BF16B4BD1900148ACA /* Events.php */; };
+		63F624D216B4BD1900148ACA /* Image.php in Resources */ = {isa = PBXBuildFile; fileRef = 63F624C016B4BD1900148ACA /* Image.php */; };
+		63F624D316B4BD1900148ACA /* Insert.php in Resources */ = {isa = PBXBuildFile; fileRef = 63F624C116B4BD1900148ACA /* Insert.php */; };
+		63F624D416B4BD1900148ACA /* library.php in Resources */ = {isa = PBXBuildFile; fileRef = 63F624C216B4BD1900148ACA /* library.php */; };
+		63F624D516B4BD1900148ACA /* Places.php in Resources */ = {isa = PBXBuildFile; fileRef = 63F624C316B4BD1900148ACA /* Places.php */; };
+		63F624D616B4BD1900148ACA /* query.php in Resources */ = {isa = PBXBuildFile; fileRef = 63F624C416B4BD1900148ACA /* query.php */; };
+		63F624D716B4BD1900148ACA /* ui.php in Resources */ = {isa = PBXBuildFile; fileRef = 63F624C516B4BD1900148ACA /* ui.php */; };
+		63F624D816B4BD1900148ACA /* Video.php in Resources */ = {isa = PBXBuildFile; fileRef = 63F624C616B4BD1900148ACA /* Video.php */; };
+		63F624D916B4BD1900148ACA /* index.php in Resources */ = {isa = PBXBuildFile; fileRef = 63F624C816B4BD1900148ACA /* index.php */; };
+		63F624DA16B4BD1900148ACA /* init.js in Sources */ = {isa = PBXBuildFile; fileRef = 63F624C916B4BD1900148ACA /* init.js */; };
+		63F624DB16B4BD1900148ACA /* json2.js in Sources */ = {isa = PBXBuildFile; fileRef = 63F624CA16B4BD1900148ACA /* json2.js */; };
+		63F624DC16B4BD1900148ACA /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 63F624CB16B4BD1900148ACA /* style.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +172,23 @@
 		63F3B9CA165D928C006E22DE /* AREvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AREvents.m; sourceTree = "<group>"; };
 		63F3B9CD165D932B006E22DE /* ARMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMedia.h; sourceTree = "<group>"; };
 		63F3B9CE165D932B006E22DE /* ARMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMedia.m; sourceTree = "<group>"; };
+		63F624B816B4BD1900148ACA /* .project */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = .project; sourceTree = "<group>"; };
+		63F624BA16B4BD1900148ACA /* com.aptana.editor.php.prefs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = com.aptana.editor.php.prefs; sourceTree = "<group>"; };
+		63F624BC16B4BD1900148ACA /* 3d.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = 3d.php; sourceTree = "<group>"; };
+		63F624BD16B4BD1900148ACA /* data.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = data.php; sourceTree = "<group>"; };
+		63F624BE16B4BD1900148ACA /* DataBase.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = DataBase.php; sourceTree = "<group>"; };
+		63F624BF16B4BD1900148ACA /* Events.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = Events.php; sourceTree = "<group>"; };
+		63F624C016B4BD1900148ACA /* Image.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = Image.php; sourceTree = "<group>"; };
+		63F624C116B4BD1900148ACA /* Insert.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = Insert.php; sourceTree = "<group>"; };
+		63F624C216B4BD1900148ACA /* library.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = library.php; sourceTree = "<group>"; };
+		63F624C316B4BD1900148ACA /* Places.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = Places.php; sourceTree = "<group>"; };
+		63F624C416B4BD1900148ACA /* query.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = query.php; sourceTree = "<group>"; };
+		63F624C516B4BD1900148ACA /* ui.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = ui.php; sourceTree = "<group>"; };
+		63F624C616B4BD1900148ACA /* Video.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = Video.php; sourceTree = "<group>"; };
+		63F624C816B4BD1900148ACA /* index.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
+		63F624C916B4BD1900148ACA /* init.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = init.js; sourceTree = "<group>"; };
+		63F624CA16B4BD1900148ACA /* json2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = json2.js; sourceTree = "<group>"; };
+		63F624CB16B4BD1900148ACA /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +255,7 @@
 		630FC28A1621E52800942E4A /* translayer */ = {
 			isa = PBXGroup;
 			children = (
+				63F624B716B4BD1900148ACA /* arcloud */,
 				637123C816AE6BD1001F5AC5 /* Controllers */,
 				632BADD716569D86001423DA /* calendar */,
 				6353F0431653EA50005DCE6B /* sensors */,
@@ -373,6 +408,54 @@
 			name = "object Loader";
 			sourceTree = "<group>";
 		};
+		63F624B716B4BD1900148ACA /* arcloud */ = {
+			isa = PBXGroup;
+			children = (
+				63F624B816B4BD1900148ACA /* .project */,
+				63F624B916B4BD1900148ACA /* .settings */,
+				63F624BB16B4BD1900148ACA /* query */,
+				63F624C716B4BD1900148ACA /* ui */,
+			);
+			path = arcloud;
+			sourceTree = "<group>";
+		};
+		63F624B916B4BD1900148ACA /* .settings */ = {
+			isa = PBXGroup;
+			children = (
+				63F624BA16B4BD1900148ACA /* com.aptana.editor.php.prefs */,
+			);
+			path = .settings;
+			sourceTree = "<group>";
+		};
+		63F624BB16B4BD1900148ACA /* query */ = {
+			isa = PBXGroup;
+			children = (
+				63F624BC16B4BD1900148ACA /* 3d.php */,
+				63F624BD16B4BD1900148ACA /* data.php */,
+				63F624BE16B4BD1900148ACA /* DataBase.php */,
+				63F624BF16B4BD1900148ACA /* Events.php */,
+				63F624C016B4BD1900148ACA /* Image.php */,
+				63F624C116B4BD1900148ACA /* Insert.php */,
+				63F624C216B4BD1900148ACA /* library.php */,
+				63F624C316B4BD1900148ACA /* Places.php */,
+				63F624C416B4BD1900148ACA /* query.php */,
+				63F624C516B4BD1900148ACA /* ui.php */,
+				63F624C616B4BD1900148ACA /* Video.php */,
+			);
+			path = query;
+			sourceTree = "<group>";
+		};
+		63F624C716B4BD1900148ACA /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				63F624C816B4BD1900148ACA /* index.php */,
+				63F624C916B4BD1900148ACA /* init.js */,
+				63F624CA16B4BD1900148ACA /* json2.js */,
+				63F624CB16B4BD1900148ACA /* style.css */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -442,6 +525,21 @@
 				63066A5316893D9F00D1A786 /* texture1-128.pvr4 in Resources */,
 				63066A5416893D9F00D1A786 /* uvcube2.mtl in Resources */,
 				63066A5516893D9F00D1A786 /* uvcube2.obj in Resources */,
+				63F624CC16B4BD1900148ACA /* .project in Resources */,
+				63F624CD16B4BD1900148ACA /* com.aptana.editor.php.prefs in Resources */,
+				63F624CE16B4BD1900148ACA /* 3d.php in Resources */,
+				63F624CF16B4BD1900148ACA /* data.php in Resources */,
+				63F624D016B4BD1900148ACA /* DataBase.php in Resources */,
+				63F624D116B4BD1900148ACA /* Events.php in Resources */,
+				63F624D216B4BD1900148ACA /* Image.php in Resources */,
+				63F624D316B4BD1900148ACA /* Insert.php in Resources */,
+				63F624D416B4BD1900148ACA /* library.php in Resources */,
+				63F624D516B4BD1900148ACA /* Places.php in Resources */,
+				63F624D616B4BD1900148ACA /* query.php in Resources */,
+				63F624D716B4BD1900148ACA /* ui.php in Resources */,
+				63F624D816B4BD1900148ACA /* Video.php in Resources */,
+				63F624D916B4BD1900148ACA /* index.php in Resources */,
+				63F624DC16B4BD1900148ACA /* style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +577,8 @@
 				63066A3B168930F100D1A786 /* OpenGLWaveFrontMaterial.m in Sources */,
 				63066A3C168930F100D1A786 /* OpenGLWaveFrontObject.m in Sources */,
 				637123CC16AF040F001F5AC5 /* ARPointInPoly.m in Sources */,
+				63F624DA16B4BD1900148ACA /* init.js in Sources */,
+				63F624DB16B4BD1900148ACA /* json2.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
