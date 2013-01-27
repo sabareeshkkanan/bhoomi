@@ -169,14 +169,15 @@ finalResult=[NSArray arrayWithObjects:state,buttonX,minimumdistance, nil];
     {
        
         float range=([LargeAngle floatValue]/2)+22.5;
+        range+=range;
         float average=(a1+a2)/2;
-        float factor=760/range;
+        average+=range/2;
+        float factor=800/range;
         float avran=average*factor;
-        if(avran<0)
-            avran+=380;
+        avran-=80;
         if([AltName isEqualToString:@"sbsb"])
         {
-                printf("%f,%f,%f,%f  \n",a1,a2,average,avran);
+                printf("%f,%f,%f,%f,%f  \n",a1,a2,range,average,avran);
         }
        
        buttonX=[NSNumber numberWithFloat:(avran)];
