@@ -26,26 +26,26 @@ const double radconst=1.57079633;
    
 }
 
--(double) distance:(CLLocation*) point1:(CLLocation*)point2
+-(double) distance:(CLLocation*) point1 :(CLLocation*)point2
 {
     return [point1 distanceFromLocation:point2];
 }
--(double) tAdjacent:(CLLocation*) point1:(CLLocation*)point2{
+-(double) tAdjacent:(CLLocation*) point1 :(CLLocation*)point2{
     CLLocation *p3=[[CLLocation alloc] initWithLatitude:point2.coordinate.latitude   longitude:point1.coordinate.longitude];
     
     return [self distance:point1 :p3];
 }
--(double) tOpposite:(CLLocation*) point1:(CLLocation*)point2{
+-(double) tOpposite:(CLLocation*) point1 :(CLLocation*)point2{
     CLLocation *p3=[[CLLocation alloc] initWithLatitude:point2.coordinate.latitude   longitude:point1.coordinate.longitude];
     return [self distance:point2 :p3];
 }
--(double) tAngle:(CLLocation*) point1:(CLLocation*)point2
+-(double) tAngle:(CLLocation*) point1 :(CLLocation*)point2
 {
     double ang=[self tOpposite:point1 :point2]/[self tAdjacent:point1 :point2];
     ang=atan(ang);
     return ang;
 }
--(float) quadcalc:(CLLocation*) point1:(CLLocation*)point2
+-(float) quadcalc:(CLLocation*) point1 :(CLLocation*)point2
 {
     double ang=[self tAngle:point1 :point2];
     if(point2.coordinate.longitude<=point1.coordinate.longitude && point2.coordinate.latitude>=point1.coordinate.latitude)

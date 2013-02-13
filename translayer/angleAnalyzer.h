@@ -12,7 +12,7 @@
 {
     float range,angle1,angle2;int state;
 }
--(id)Analyze:(float)Range:(float)Angle1:(float)Angle2;
+-(id)Analyze:(float)Range :(float)Angle1 :(float)Angle2;
 -(int)State;
 -(float)Angle;
 @end

@@ -11,6 +11,7 @@
 #import "angleAnalyzer.h"
 #import "ARPointInPoly.h"
 #import <EventKit/EventKit.h>
+#import <QuartzCore/QuartzCore.h>
 @protocol buttonEvent <NSObject>
 -(void)buttonTouch:(id)quad;
 @end
@@ -34,7 +35,7 @@
 @property(nonatomic,retain)   NSString *AltName,*LocationName,*LocationType,*user,*Q_id;
 @property(nonatomic,retain )   NSMutableArray *Tags,*events;
 @property(nonatomic,retain)NSArray *finalResult;
-@property(nonatomic,retain)NSNumber *minimumdistance;
+@property(nonatomic,retain)NSNumber *minimumdistance,*state;
 
 -(void)addEventsFromCalendar:(NSArray*) CalendarEvents;
 
@@ -45,6 +46,7 @@
 -(void)ComputeByGps:(CLLocation*)currentLocation;
 -(void)ComputeByHeading:(double)heading;
 -(void)buttonPriority:(int)y;
+-(void)sortEventsbyDate;
 
 @end
 

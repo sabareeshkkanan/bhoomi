@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class ARCloud;
 @protocol CloudResponse <NSObject>
--(void)OnDownload:(NSData*)data:(int)ref;
+-(void)OnDownload:(NSData*)data :(int)ref;
 @end
 
 @interface ARCloud : NSObject{
@@ -19,6 +19,6 @@
 }
 @property(nonatomic,weak)id<CloudResponse> delegate;
 
-- (void)requestwithArray:(NSMutableDictionary*)json:(NSString*)url;
--(void)request:(NSString*)url:(int)ref;
+- (void)requestwithArray:(NSMutableDictionary*)json :(NSString*)url;
+-(void)request:(NSString*)url :(int)ref;
 @end

@@ -77,7 +77,7 @@ static inline void	processOneVertex(VertexTextureIndex *rootNode, GLuint vertexI
 	}
 	return self;
 }
--(void)ConstructObject:(NSString*)location:(NSString*)filename{
+-(void)ConstructObject:(NSString*)location :(NSString*)filename{
     self.groups = [NSMutableArray array];
     
     self.sourceObjFilePath = [[NSURL alloc] initWithString:[location stringByAppendingString:filename]];

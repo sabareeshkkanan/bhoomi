@@ -68,7 +68,7 @@
    }
   
 }
--(void)OnDownload:(NSData *)thedata:(int)url
+-(void)OnDownload:(NSData *)thedata :(int)url
 {
   //  NSLog(@"%@",[[NSString alloc] initWithData:thedata encoding:NSUTF8StringEncoding]);
     data=[NSJSONSerialization JSONObjectWithData:thedata options:0 error:nil];
@@ -107,13 +107,12 @@
 }
 -(void)onCalendarRetrive:(NSArray *)calendarEvents
 {
-   // NSLog(@"%@", calendarEvents);
     for(Quad* obj in places)
     {
         [obj addEventsFromCalendar:calendarEvents];
+        
     }
-
-       // [newloc addEventsFromCalendar:[calevents events]];
+    
 }
 
 

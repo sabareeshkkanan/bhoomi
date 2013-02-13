@@ -109,7 +109,7 @@
 
 }
 -(void)CalculateRotation:(OpenGLWaveFrontObject*) object{
-    [object.GPSposition calculateAngle:[[CLLocation alloc] initWithLatitude:33.13043115895641 longitude:-117.15774983167648]];
+    [object.GPSposition calculateAngle:[senseData gps]];
     Rotation3D rotation;
     rotation.x=10;
     rotation.y=[object.GPSposition angle];
@@ -125,6 +125,8 @@
     
     if([object.GPSposition Distance_]>150)
         object.display=FALSE;
+    else
+        object.display=TRUE;
     
     scale =-[object.GPSposition Distance_]/6;
    // scale=-25;

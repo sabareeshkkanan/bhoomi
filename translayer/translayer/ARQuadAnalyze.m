@@ -79,16 +79,20 @@
     int hcount=70;
   for(Quad* quad in quads)
   {
-      [quad buttonPriority:hcount];
-//      quad.button.frame=CGRectMake([[[quad finalResult] objectAtIndex:1] floatValue], hcount, 160.0, 40.0);
-      hcount+=50;
+   if([quad.state intValue]>0)
+   {
+       [quad buttonPriority:hcount];
+      hcount+=120;
+   }
+      else
+          [quad buttonPriority:1000];
   }
 }
 -(void)analyzeQuad{
     for(Quad* quad in quads)
     {
-       // [quad AngleByLocation:[data gps]];
-        [quad ComputeByGps:[[CLLocation alloc] initWithLatitude:33.13070069755159 longitude:-117.15790137648582]];
+        [quad ComputeByGps:[data gps]];
+     //   [quad ComputeByGps:[[CLLocation alloc] initWithLatitude:33.13070069755159 longitude:-117.15790137648582]];
         [quad ComputeByHeading:[data heading]];
     }
     

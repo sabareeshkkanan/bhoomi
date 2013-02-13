@@ -14,5 +14,5 @@
     NSArray *quad;
     CLLocation *pt;
 }
--(BOOL)pnpoly:(NSArray*)quadI:(CLLocation*)ptI;
+-(BOOL)pnpoly : (NSArray*)quadI : (CLLocation*)ptI ;
 @end

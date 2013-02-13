@@ -11,8 +11,9 @@
 
 @interface AREvents : NSObject
 
-@property(strong) NSString *name,*alt,*info,*user,*startDate,*endDate,*notes,*eventType;
+@property(strong) NSString *name,*alt,*user,*_startDate,*_endDate,*notes,*eventType,*_description;
 @property(strong) NSMutableArray *media;
+@property(strong)NSNumber *sortDate;
 -(id)initwithArray:(NSArray*)data;
 -(id)initwithEKEvent:(EKEvent*)obj;
 @end

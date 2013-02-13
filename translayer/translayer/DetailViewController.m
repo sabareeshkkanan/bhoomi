@@ -37,13 +37,13 @@
 -(void)loadPersonalEvent
 {
     [self addLabel:[event name]];
-    NSString *content=[NSString stringWithFormat:@"%s%@ \n %s%@ \n%@","Start Date : ",event.startDate,"End Date : ",event.endDate,event.notes];
+    NSString *content=[NSString stringWithFormat:@"%s%@ \n %s%@ \n%@","Start Date : ",event._startDate,"End Date : ",event._endDate,event.notes];
     
     UITextView *textView=[[UITextView alloc] initWithFrame:CGRectMake(0, yOrigin, size.width, 30)];
     
     
     [textView setText:content];
-    float numlines=textView.contentSize.height/textView.font.leading;
+    float numlines=2;
     [textView setFrame:CGRectMake(0, yOrigin, size.width, 30*numlines)];
     [self addtoY:30*numlines];
     [textView setScrollEnabled:YES];
@@ -55,38 +55,36 @@
     
     [self setTitle:[event name]];
     
-    if(event.startDate)
+    if(event._startDate)
     {
-    NSString *content=[NSString stringWithFormat:@"%s%@ \n %s%@ \n","Start Date : ",event.startDate,"End Date : ",event.endDate];
+    NSString *content=[NSString stringWithFormat:@"%s%@ \n %s%@ \n%@","Start Date : ",event._startDate,"End Date : ",event._endDate,event.notes];
     UITextView *textView=[[UITextView alloc] initWithFrame:CGRectMake(0, yOrigin, size.width, 30)];
     
     
     [textView setText:content];
-    float numlines=textView.contentSize.height/textView.font.leading;
+        float numlines=2;
     [textView setFrame:CGRectMake(0, yOrigin, size.width, 30*numlines)];
     [self addtoY:30*numlines];
     [textView setScrollEnabled:YES];
     [scroll addSubview:textView];
 
     }
+    [self mediawithData:[event _description]];
     
     for(ARMedia* media in [event valueForKey:@"media"]){
         if([[media type] isEqualToString:@"Video"])
             [self mediawithVideo:media];
         else if ([[media type]isEqualToString:@"Image"])
             [self mediawithImage:media];
-        else if ([[media type]isEqualToString:@"Data"])
-            [self mediawithData:media];
         
     }
     scroll.contentSize=CGSizeMake(500, yOrigin);
     
 }
--(void)mediawithData:(ARMedia*)data{
-    [self addLabel:[data name]];
+-(void)mediawithData:(NSString*)data{
      UITextView *textView=[[UITextView alloc] initWithFrame:CGRectMake(0, yOrigin, size.width, 30)];
-        [textView setText:[data url]];
-    float numlines=textView.contentSize.height/textView.font.leading;
+        [textView setText:data];
+    float numlines=5;
     [textView setFrame:CGRectMake(0, yOrigin, size.width, 30*numlines)];
     [self addtoY:30*numlines];
 
@@ -137,7 +135,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)OnDownload:(NSData *)data:(int)ref
+-(void)OnDownload:(NSData *)data :(int)ref
 {
     UIImage *img=[UIImage imageWithData:data];
     [[imageviews objectAtIndex:(ref-1)] setImage:img] ;

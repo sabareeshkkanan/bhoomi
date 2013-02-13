@@ -30,7 +30,7 @@
     [super viewDidLoad];
     
     
-   tableView=[[UITableView alloc] initWithFrame:CGRectMake(200, 100, 400, 500) style:UITableViewStylePlain];
+   tableView=[[UITableView alloc] initWithFrame:CGRectMake(100, 100, 600, 500) style:UITableViewStylePlain];
     tableView.delegate=self;
     tableView.dataSource=self;
     [tableView setBackgroundColor:[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:0.5]];
@@ -43,7 +43,7 @@
 }
 -(void)loadnewQuad:(Quad *)result{
     theQuad=result;
-    
+    [theQuad sortEventsbyDate];
     [self setTitle:[theQuad LocationName]];
     
     [tableView reloadData];
@@ -57,7 +57,7 @@
       [self.tableView setHidden:true];
     else
          [self.tableView setHidden:false];
-    [self.tableView setFrame:CGRectMake(200, 100, 400, 40*[[theQuad events] count]) ];
+    [self.tableView setFrame:CGRectMake(100, 100, 600, 45*[[theQuad events] count]) ];
     return [[theQuad events] count];
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -67,7 +67,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                        reuseIdentifier:CellIdentifier] ;
     }
-    cell.textLabel.text=[[[theQuad events] objectAtIndex:indexPath.row] name];
+    NSString *title=[[[theQuad events] objectAtIndex:indexPath.row] name] ;
+    if(title.length>25)
+        title=[title substringToIndex:25];
+    title=[title stringByAppendingString:@"   -   "];
+    cell.textLabel.text=[title stringByAppendingString:[[[theQuad events] objectAtIndex:indexPath.row] _startDate]];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -84,12 +88,6 @@
 }
 -(void)backButton
 {
-   /* UIButton *but=[UIButton buttonWithType:UIButtonTypeCustom];
-    but.frame=CGRectMake(10,50, 100, 40);
-    [but setTitle:@"< back" forState:UIControlStateNormal];
-    [but addTarget:self action:@selector(removeView:) forControlEvents:UIControlEventTouchDown];
-    [but  setBackgroundColor:[UIColor clearColor]];
-    [self.view addSubview:but];*/
     UIBarButtonItem *HomeButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Home"
                                    style:UIBarButtonItemStyleBordered

@@ -15,7 +15,7 @@
     return self;
 }
 
-- (void)requestwithArray:(NSMutableDictionary*)json:(NSString*)url
+- (void)requestwithArray:(NSMutableDictionary*)json : (NSString*)url
 {
     NSURL *myURL = [NSURL URLWithString:url];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:myURL cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:60];
@@ -30,7 +30,7 @@
    (void) [[NSURLConnection alloc] initWithRequest:request delegate:self];
    
 }
--(void)request:(NSString*)url:(int)ref{
+-(void)request:(NSString*)url : (int)ref{
     refe=ref;
     NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     (void)[[NSURLConnection alloc] initWithRequest:request delegate:self];

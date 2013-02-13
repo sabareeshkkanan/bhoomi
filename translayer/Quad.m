@@ -10,9 +10,9 @@
 
 @implementation Quad
 @synthesize AltName,LocationName,LocationType,user,Tags,events,finalResult,Q_id;
-@synthesize button,delegate,minimumdistance;
+@synthesize button,delegate,minimumdistance,state;
 
--(void)setvalue:(Location*)p1:(Location*)p2:(Location*)p3:(Location*)p4
+-(void)setvalue:(Location*)p1 :(Location*)p2 :(Location*)p3 :(Location*)p4
 {
     
     location=[[NSArray alloc] initWithObjects:p1,p2,p3,p4, nil];
@@ -42,6 +42,11 @@
     
     
     return self;
+}
+-(void)sortEventsbyDate
+{
+    NSSortDescriptor *sort=[[NSSortDescriptor alloc] initWithKey:@"sortDate" ascending:YES];
+    [events sortUsingDescriptors:[NSArray arrayWithObject:sort]];
 }
 
 -(void)populateEvents:(NSArray*)data{
@@ -116,7 +121,7 @@ finalResult=[NSArray arrayWithObjects:state,buttonX,minimumdistance, nil];
     [self calculateAngle:currentLocation];
 
     if(![self inside:currentLocation]){
-   
+        InsideQuad=FALSE;
     [self angleA:currentLocation :[[location objectAtIndex:0] point] : [[location objectAtIndex:1] point]:0 :1];
     [self angleA:currentLocation :[[location objectAtIndex:0] point] : [[location objectAtIndex:2] point]:0 :2];
     [self angleA:currentLocation :[[location objectAtIndex:0] point] : [[location objectAtIndex:3] point]:0 :3];
@@ -128,7 +133,7 @@ finalResult=[NSArray arrayWithObjects:state,buttonX,minimumdistance, nil];
         InsideQuad=TRUE;
   
 }
--(void)angleA:(CLLocation*)A:(CLLocation*)B:(CLLocation*)C:(int)bb:(int)cc
+-(void)angleA:(CLLocation*)A :(CLLocation*)B :(CLLocation*)C :(int)bb :(int)cc
 {
     double a=[B distanceFromLocation:C];
     if(a==0 && ([LargeAngle floatValue]==0.0||[LargeAngle floatValue]==-360.0))
@@ -158,9 +163,14 @@ finalResult=[NSArray arrayWithObjects:state,buttonX,minimumdistance, nil];
 -(void)newButton:(NSString*)title
 {
     
-    button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button addTarget:self action:@selector(calldelegate:) forControlEvents:UIControlEventTouchDown];
-    
+    CALayer *layer = button.layer;
+    layer.backgroundColor = [[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.3] CGColor];
+    layer.borderColor = [[UIColor darkGrayColor] CGColor];
+    layer.cornerRadius = 8.0f;
+    layer.borderWidth = 1.0f;
+    [button.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
     [button setTitle:title forState:UIControlStateNormal];
 }
 -(void)ButtonLocation
@@ -175,11 +185,6 @@ finalResult=[NSArray arrayWithObjects:state,buttonX,minimumdistance, nil];
         float factor=800/range;
         float avran=average*factor;
         avran-=80;
-        if([AltName isEqualToString:@"sbsb"])
-        {
-                printf("%f,%f,%f,%f,%f  \n",a1,a2,range,average,avran);
-        }
-       
        buttonX=[NSNumber numberWithFloat:(avran)];
        
     }
@@ -190,10 +195,17 @@ finalResult=[NSArray arrayWithObjects:state,buttonX,minimumdistance, nil];
 }
 -(void)buttonPriority:(int)y
 {
-    if(!InsideQuad)
-        button.frame=CGRectMake([buttonX floatValue], y, 160, 40);
+    NSString *distance_=[NSString stringWithFormat:@"%.2f",[minimumdistance floatValue]];
+    
+        if(!InsideQuad)
+        button.frame=CGRectMake([buttonX floatValue], y, 160, 80);
     else
-        button.frame=CGRectMake(540, 50, 160, 40);
+    {  button.frame=CGRectMake(540, 50, 160, 80);
+        distance_=@"0.00";
+    }
+    NSString *content=[NSString stringWithFormat:@"%@\n%@%@",LocationName,distance_,@" meters"];
+    [button setTitle:content forState:UIControlStateNormal];
+
 }
 -(void)calldelegate:(id)sender
 {

@@ -29,7 +29,7 @@
 }
 
 
--(BOOL)pnpoly:(NSArray*)quadI:(CLLocation*)ptI
+-(BOOL)pnpoly:(NSArray*)quadI :(CLLocation*)ptI
 {
     quad=quadI;pt=ptI;
     int i,j,c=0,nvert=[quad count];
