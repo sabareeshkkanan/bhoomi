@@ -67,7 +67,7 @@
 -(void)different{
     if(angle2<0)
     {
-        if(angle2<0 && angle1>0 && (angle1+(-1*angle2))<=range+0.1)
+        if( angle1>0 && (angle1+(-1*angle2))<=range+0.1)
         {
             state=3;
             if((angle2*-1)<angle1)
@@ -78,7 +78,7 @@
     }
     else
     {
-        if(angle1<0 && angle2>0 && (angle2+(-1*angle1))<=range+0.1)
+        if(angle1<0 && (angle2+(-1*angle1))<=range+0.1)
         {
             state=4;
             if(angle2<(-1*angle1))

@@ -41,7 +41,7 @@
     [self.navigationController.navigationBar setAlpha:0.5];
 	// Do any additional setup after loading the view.
 }
--(void)loadnewQuad:(Quad *)result{
+-(void)loadnewQuad:(Landmark *)result{
     theQuad=result;
     [theQuad sortEventsbyDate];
     [self setTitle:[theQuad LocationName]];

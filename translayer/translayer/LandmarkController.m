@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 DreamPowers. All rights reserved.
 //
 
-#import "ARQuadAnalyze.h"
+#import "LandmarkController.h"
 
-@implementation ARQuadAnalyze
+@implementation LandmarkController
 @synthesize locations,data;
 @synthesize wrapperView,glView,controller;
 @synthesize tableController,navController;
@@ -21,7 +21,7 @@
         navController=[[UINavigationController alloc] initWithRootViewController:tableController];
         
         data=[[SensorData alloc] init];
-        locations=[[GetLocation alloc] init];
+        locations=[[Oracle alloc] init];
         
         wrapperView=[[UIView alloc] initWithFrame:bound];
         buttonsView=[[UIView alloc] initWithFrame:bound];
@@ -45,7 +45,7 @@
 -(void)QuadChanged:(NSArray *)places
 {
     quads=[places objectAtIndex:0];
-    for(Quad* quad in quads)
+    for(Landmark* quad in quads)
     {    [quad setDelegate:self];
         [buttonsView addSubview:[quad button]];
     }
@@ -77,7 +77,7 @@
     quads = [quads sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
     
     int hcount=70;
-  for(Quad* quad in quads)
+  for(Landmark* quad in quads)
   {
    if([quad.state intValue]>0)
    {
@@ -89,10 +89,10 @@
   }
 }
 -(void)analyzeQuad{
-    for(Quad* quad in quads)
+    for(Landmark* quad in quads)
     {
         [quad ComputeByGps:[data gps]];
-     //   [quad ComputeByGps:[[CLLocation alloc] initWithLatitude:33.13070069755159 longitude:-117.15790137648582]];
+     
         [quad ComputeByHeading:[data heading]];
     }
     
@@ -123,6 +123,9 @@
    
     [tableController loadnewQuad:quad];
     [wrapperView addSubview:navController.view];
+    if(lastSelectedQuad)
+        [lastSelectedQuad buttonlayer:[[UIColor darkGrayColor] CGColor]];
+    lastSelectedQuad=quad;
     
 }
 @end

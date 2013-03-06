@@ -24,7 +24,7 @@
    tableController=[[TableViewController alloc] init];
     navController=[[UINavigationController alloc] initWithRootViewController:tableController];
     CGRect layerRect = [[[self view] layer] bounds];
-    analyze=[[ARQuadAnalyze alloc] init:layerRect];
+    analyze=[[LandmarkController alloc] init:layerRect];
     locationId=@"start";
    [self setcamera];
 

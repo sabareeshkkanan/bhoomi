@@ -6,16 +6,16 @@
 //  Copyright (c) 2012 DreamPowers. All rights reserved.
 //
 
-#import "GetLocation.h"
+#import "Oracle.h"
 #import "TableViewController.h"
 #import "GLViewController.h"
 #import "GLView.h"
 
-@class ARQuadAnalyze;
+@class LandmarkController;
 
-@interface ARQuadAnalyze : NSObject<CloudUpdate,buttonEvent>
+@interface LandmarkController : NSObject<CloudUpdate,buttonEvent>
 {
-    GetLocation *locations;
+    Oracle *locations;
     
 
     
@@ -32,11 +32,11 @@
     
     
     CGRect bound;
-    
+    Landmark *lastSelectedQuad;
   
 }
 @property UIView *wrapperView;
-@property(nonatomic,retain)GetLocation *locations;
+@property(nonatomic,retain)Oracle *locations;
 @property(nonatomic,retain)SensorData *data;
 
 @property(nonatomic,retain) UINavigationController *navController;

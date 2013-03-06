@@ -9,12 +9,12 @@
 #import "Sensors.h"
 #import "ARCloud.h"
 #import "calendar.h"
-@class GetLocation;
+@class Oracle;
 @protocol CloudUpdate <NSObject>
 -(void)QuadChanged:(NSArray*)places;
 @end
 
-@interface GetLocation : NSObject<CloudResponse,retriveCalendar>
+@interface Oracle : NSObject<CloudResponse,retriveCalendar>
 {
    
     ARCloud *cloud;

@@ -8,16 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailViewController.h"
-#import "Quad.h"
+#import "Landmark.h"
 
 @interface TableViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *tableView;
-    Quad* theQuad;
+    Landmark* theQuad;
  
 }
-@property(nonatomic,strong)Quad *theQuad;
+@property(nonatomic,strong)Landmark *theQuad;
 @property(nonatomic,retain)UITableView *tableView;
 
--(void)loadnewQuad:(Quad *)result;
+-(void)loadnewQuad:(Landmark *)result;
 @end

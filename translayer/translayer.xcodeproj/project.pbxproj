@@ -42,7 +42,7 @@
 		630FC2B8162242C400942E4A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FC2B7162242C400942E4A /* OpenGLES.framework */; };
 		630FC2BA162242CB00942E4A /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FC2B9162242CB00942E4A /* GLKit.framework */; };
 		632BADDE16569DDE001423DA /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 632BADDD16569DDE001423DA /* Location.m */; };
-		632BADE116569E50001423DA /* Quad.m in Sources */ = {isa = PBXBuildFile; fileRef = 632BADE016569E50001423DA /* Quad.m */; };
+		632BADE116569E50001423DA /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 632BADE016569E50001423DA /* Landmark.m */; };
 		632BADE416569EAF001423DA /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 632BADE316569EAF001423DA /* SensorData.m */; };
 		633991CA1625100B00600E68 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633991C91625100B00600E68 /* QuartzCore.framework */; };
 		6353F0541653EABC005DCE6B /* calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6353F04F1653EABC005DCE6B /* calendar.m */; };
@@ -54,9 +54,9 @@
 		63B050BF164ED480000B9806 /* ARLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B050BE164ED480000B9806 /* ARLabel.m */; };
 		63B050D31650B763000B9806 /* ARCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B050D21650B763000B9806 /* ARCloud.m */; };
 		63B3BFA8164C562700BD62C7 /* ARVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3BFA7164C562700BD62C7 /* ARVideo.m */; };
-		63E7F064165AC2CE00C3D62A /* GetLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E7F063165AC2CE00C3D62A /* GetLocation.m */; };
+		63E7F064165AC2CE00C3D62A /* Oracle.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E7F063165AC2CE00C3D62A /* Oracle.m */; };
 		63E8741C166068720081D662 /* angleAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8741B166068720081D662 /* angleAnalyzer.m */; };
-		63E8742B16611A400081D662 /* ARQuadAnalyze.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8742A16611A400081D662 /* ARQuadAnalyze.m */; };
+		63E8742B16611A400081D662 /* LandmarkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8742A16611A400081D662 /* LandmarkController.m */; };
 		63EFBD211688DF010056D4C3 /* plane3.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 63EFBD1F1688DF010056D4C3 /* plane3.mtl */; };
 		63EFBD221688DF010056D4C3 /* plane3.obj in Resources */ = {isa = PBXBuildFile; fileRef = 63EFBD201688DF010056D4C3 /* plane3.obj */; };
 		63F0B63C165DE4AD00B9D9A3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F0B63B165DE4AD00B9D9A3 /* TableViewController.m */; };
@@ -135,8 +135,8 @@
 		630FC2B9162242CB00942E4A /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		632BADDC16569DDE001423DA /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		632BADDD16569DDE001423DA /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		632BADDF16569E50001423DA /* Quad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quad.h; sourceTree = "<group>"; };
-		632BADE016569E50001423DA /* Quad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quad.m; sourceTree = "<group>"; };
+		632BADDF16569E50001423DA /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landmark.h; sourceTree = "<group>"; };
+		632BADE016569E50001423DA /* Landmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmark.m; sourceTree = "<group>"; };
 		632BADE216569EAF001423DA /* SensorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorData.h; sourceTree = "<group>"; };
 		632BADE316569EAF001423DA /* SensorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorData.m; sourceTree = "<group>"; };
 		633991C91625100B00600E68 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -155,12 +155,12 @@
 		63B050D21650B763000B9806 /* ARCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCloud.m; sourceTree = "<group>"; };
 		63B3BFA6164C562700BD62C7 /* ARVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARVideo.h; sourceTree = "<group>"; };
 		63B3BFA7164C562700BD62C7 /* ARVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARVideo.m; sourceTree = "<group>"; };
-		63E7F062165AC2CD00C3D62A /* GetLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLocation.h; sourceTree = "<group>"; };
-		63E7F063165AC2CE00C3D62A /* GetLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLocation.m; sourceTree = "<group>"; };
+		63E7F062165AC2CD00C3D62A /* Oracle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oracle.h; sourceTree = "<group>"; };
+		63E7F063165AC2CE00C3D62A /* Oracle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Oracle.m; sourceTree = "<group>"; };
 		63E8741A166068720081D662 /* angleAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = angleAnalyzer.h; sourceTree = "<group>"; };
 		63E8741B166068720081D662 /* angleAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = angleAnalyzer.m; sourceTree = "<group>"; };
-		63E8742916611A400081D662 /* ARQuadAnalyze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARQuadAnalyze.h; sourceTree = "<group>"; };
-		63E8742A16611A400081D662 /* ARQuadAnalyze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARQuadAnalyze.m; sourceTree = "<group>"; };
+		63E8742916611A400081D662 /* LandmarkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkController.h; sourceTree = "<group>"; };
+		63E8742A16611A400081D662 /* LandmarkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandmarkController.m; sourceTree = "<group>"; };
 		63EFBD1F1688DF010056D4C3 /* plane3.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane3.mtl; sourceTree = "<group>"; };
 		63EFBD201688DF010056D4C3 /* plane3.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane3.obj; sourceTree = "<group>"; };
 		63F0B63A165DE4AD00B9D9A3 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -307,16 +307,16 @@
 				6353F0531653EABC005DCE6B /* Sensors.m */,
 				632BADDC16569DDE001423DA /* Location.h */,
 				632BADDD16569DDE001423DA /* Location.m */,
-				632BADDF16569E50001423DA /* Quad.h */,
-				632BADE016569E50001423DA /* Quad.m */,
+				632BADDF16569E50001423DA /* Landmark.h */,
+				632BADE016569E50001423DA /* Landmark.m */,
 				637123CA16AF040F001F5AC5 /* ARPointInPoly.h */,
 				637123CB16AF040F001F5AC5 /* ARPointInPoly.m */,
 				63E8741A166068720081D662 /* angleAnalyzer.h */,
 				63E8741B166068720081D662 /* angleAnalyzer.m */,
 				632BADE216569EAF001423DA /* SensorData.h */,
 				632BADE316569EAF001423DA /* SensorData.m */,
-				63E7F062165AC2CD00C3D62A /* GetLocation.h */,
-				63E7F063165AC2CE00C3D62A /* GetLocation.m */,
+				63E7F062165AC2CD00C3D62A /* Oracle.h */,
+				63E7F063165AC2CE00C3D62A /* Oracle.m */,
 			);
 			name = sensors;
 			path = ..;
@@ -329,8 +329,8 @@
 				63F0B63B165DE4AD00B9D9A3 /* TableViewController.m */,
 				630FC2A21621E52800942E4A /* ARViewController.h */,
 				630FC2A31621E52800942E4A /* ARViewController.m */,
-				63E8742916611A400081D662 /* ARQuadAnalyze.h */,
-				63E8742A16611A400081D662 /* ARQuadAnalyze.m */,
+				63E8742916611A400081D662 /* LandmarkController.h */,
+				63E8742A16611A400081D662 /* LandmarkController.m */,
 				63F0B63E165DF3F100B9D9A3 /* DetailViewController.h */,
 				63F0B63F165DF3F100B9D9A3 /* DetailViewController.m */,
 			);
@@ -560,15 +560,15 @@
 				6353F0541653EABC005DCE6B /* calendar.m in Sources */,
 				6353F0561653EABC005DCE6B /* Sensors.m in Sources */,
 				632BADDE16569DDE001423DA /* Location.m in Sources */,
-				632BADE116569E50001423DA /* Quad.m in Sources */,
+				632BADE116569E50001423DA /* Landmark.m in Sources */,
 				632BADE416569EAF001423DA /* SensorData.m in Sources */,
-				63E7F064165AC2CE00C3D62A /* GetLocation.m in Sources */,
+				63E7F064165AC2CE00C3D62A /* Oracle.m in Sources */,
 				63F3B9CB165D928C006E22DE /* AREvents.m in Sources */,
 				63F3B9CF165D932B006E22DE /* ARMedia.m in Sources */,
 				63F0B63C165DE4AD00B9D9A3 /* TableViewController.m in Sources */,
 				63F0B640165DF3F100B9D9A3 /* DetailViewController.m in Sources */,
 				63E8741C166068720081D662 /* angleAnalyzer.m in Sources */,
-				63E8742B16611A400081D662 /* ARQuadAnalyze.m in Sources */,
+				63E8742B16611A400081D662 /* LandmarkController.m in Sources */,
 				63066A36168930F100D1A786 /* gluLookAt.m in Sources */,
 				63066A37168930F100D1A786 /* GLView.m in Sources */,
 				63066A38168930F100D1A786 /* GLViewController.m in Sources */,

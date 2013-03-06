@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Camera.h"
-#import "ARQuadAnalyze.h"
+#import "LandmarkController.h"
 
 @interface ARViewController : UIViewController
 {
@@ -16,7 +16,7 @@
     Camera *captureManager;
     UINavigationController *navController;
   
-    Quad *h1;
+    Landmark *h1;
     SensorData *data;
     NSString *locationId;
    
@@ -25,7 +25,7 @@
 @property(nonatomic,retain) UINavigationController *navController;
 @property(nonatomic,retain) TableViewController *tableController;
 @property (retain) Camera *captureManager;
-@property(nonatomic,retain)ARQuadAnalyze *analyze;
+@property(nonatomic,retain)LandmarkController *analyze;
 
 
 

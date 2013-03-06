@@ -7,7 +7,7 @@
 //
 
 
-#import "Quad.h"
+#import "Landmark.h"
 
 
 @interface Sensors : NSObject  <CLLocationManagerDelegate>

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 DreamPowers. All rights reserved.
 //
 
-#import "GetLocation.h"
+#import "Oracle.h"
 
-@implementation GetLocation
+@implementation Oracle
 @synthesize sensordata,places,sensors;
 @synthesize delegate;
 -(id)init
@@ -61,6 +61,7 @@
    }else{
     
     [json setObject:[NSArray arrayWithObjects:[self DtoNum:[sensordata lng]],[self DtoNum:[sensordata lat]], nil] forKey:@"Location"];
+       [json setObject:@"1000" forKey:@"range"];
         [cloud requestwithArray:json:url];
        PreviousData=[sensors update];
        [self check];
@@ -89,6 +90,7 @@
 {
     NSDictionary *quad=results[@"results"];
     NSDictionary *threeD=results[@"threeD"];
+ //   NSLog(@"%@",results);
     
     [places removeAllObjects];
     calendar *calEvents=[[calendar alloc] init];
@@ -97,7 +99,7 @@
       
    
     for (NSArray *key in objects) {
-              Quad *newloc=[[Quad alloc] initwithdata:key];
+              Landmark *newloc=[[Landmark alloc] initwithdata:key];
        
         [places addObject:newloc];
     }
@@ -107,7 +109,7 @@
 }
 -(void)onCalendarRetrive:(NSArray *)calendarEvents
 {
-    for(Quad* obj in places)
+    for(Landmark* obj in places)
     {
         [obj addEventsFromCalendar:calendarEvents];
         

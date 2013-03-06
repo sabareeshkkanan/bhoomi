@@ -20,13 +20,15 @@
     NSURL *myURL = [NSURL URLWithString:url];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:myURL cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:60];
     [request setHTTPMethod:@"POST"];
-    [json setObject:@"1" forKey:@"ipad"];
+    NSString *uid=[NSString stringWithFormat:@"%@",[UIDevice currentDevice].identifierForVendor.UUIDString];
+    [json setObject:uid forKey:@"uid"];
       NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:0 error:nil];
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:[NSString stringWithFormat:@"%d", [jsonData length]] forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody: jsonData];
+    NSLog(@"%@",json);
    (void) [[NSURLConnection alloc] initWithRequest:request delegate:self];
    
 }
