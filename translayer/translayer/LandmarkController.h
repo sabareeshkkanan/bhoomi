@@ -15,15 +15,15 @@
 
 @interface LandmarkController : NSObject<CloudUpdate,buttonEvent>
 {
-    Oracle *locations;
+    Oracle *_oracle;
     
 
     
-    NSArray *quads;
+    NSArray *landmarks;
     NSArray *threeD;
     
 
-    NSArray *result;
+  
     GLViewController *controller;
   
     GLView *glView ;
@@ -32,15 +32,15 @@
     
     
     CGRect bound;
-    Landmark *lastSelectedQuad;
+    Landmark *lastSelectedLandmark;
   
 }
 @property UIView *wrapperView;
-@property(nonatomic,retain)Oracle *locations;
+@property(nonatomic,retain)Oracle *_oracle;
 @property(nonatomic,retain)SensorData *data;
 
-@property(nonatomic,retain) UINavigationController *navController;
-@property(nonatomic,retain) TableViewController *tableController;
+@property(nonatomic,retain) UINavigationController *navigationController;
+@property(nonatomic,retain) TableViewController *tableViewController;
 
 @property (nonatomic, retain) GLViewController *controller;
 @property (nonatomic, retain) GLView *glView ;

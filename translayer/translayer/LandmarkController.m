@@ -9,24 +9,24 @@
 #import "LandmarkController.h"
 
 @implementation LandmarkController
-@synthesize locations,data;
+@synthesize _oracle,data;
 @synthesize wrapperView,glView,controller;
-@synthesize tableController,navController;
+@synthesize tableViewController,navigationController;
 -(id)init:(CGRect)dimension
 {
     if(self)
     {
         bound=dimension;
-        tableController=[[TableViewController alloc] init];
-        navController=[[UINavigationController alloc] initWithRootViewController:tableController];
+        tableViewController=[[TableViewController alloc] init];
+        navigationController=[[UINavigationController alloc] initWithRootViewController:tableViewController];
         
         data=[[SensorData alloc] init];
-        locations=[[Oracle alloc] init];
+        _oracle=[[Oracle alloc] init];
         
         wrapperView=[[UIView alloc] initWithFrame:bound];
         buttonsView=[[UIView alloc] initWithFrame:bound];
         
-        [locations setDelegate:self];
+        [_oracle setDelegate:self];
      
      
         [self setGl];
@@ -44,8 +44,8 @@
 
 -(void)QuadChanged:(NSArray *)places
 {
-    quads=[places objectAtIndex:0];
-    for(Landmark* quad in quads)
+    landmarks=[places objectAtIndex:0];
+    for(Landmark* quad in landmarks)
     {    [quad setDelegate:self];
         [buttonsView addSubview:[quad button]];
     }
@@ -56,7 +56,7 @@
 -(void)analyzer
 {
    
-    if([quads count]>0)
+    if([landmarks count]>0)
     {
         [self getSensorData];
         [self.controller setSenseData:data];
@@ -74,32 +74,30 @@
 -(void)closest
 {
      NSSortDescriptor * sort = [[NSSortDescriptor alloc] initWithKey:@"minimumdistance" ascending:TRUE] ;
-    quads = [quads sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+    landmarks = [landmarks sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
     
     int hcount=70;
-  for(Landmark* quad in quads)
+  for(Landmark* _landmark in landmarks)
   {
-   if([quad.state intValue]>0)
+   if([_landmark.state intValue]>0)
    {
-       [quad buttonPriority:hcount];
+       [_landmark buttonPriority:hcount];
       hcount+=120;
    }
       else
-          [quad buttonPriority:1000];
+          [_landmark buttonPriority:1000];
   }
 }
 -(void)analyzeQuad{
-    for(Landmark* quad in quads)
+    for(Landmark* _landmark in landmarks)
     {
-        [quad ComputeByGps:[data gps]];
-     
-        [quad ComputeByHeading:[data heading]];
+        [_landmark analyzeWithSensorData:[data gps] :[data heading]];
     }
     
 }
 -(void)getSensorData
 {
-    data=[[locations sensors] update];
+    data=[[_oracle sensors] update];
     
     
 }
@@ -118,14 +116,14 @@
     [[self controller] loader:Obj];
 }
 
--(void)buttonTouch:(id)quad
+-(void)buttonTouch:(id)_landmark
 {
    
-    [tableController loadnewQuad:quad];
-    [wrapperView addSubview:navController.view];
-    if(lastSelectedQuad)
-        [lastSelectedQuad buttonlayer:[[UIColor darkGrayColor] CGColor]];
-    lastSelectedQuad=quad;
+    [tableViewController loadnewQuad:_landmark];
+    [wrapperView addSubview:navigationController.view];
+    if(lastSelectedLandmark)
+        [lastSelectedLandmark buttonlayer:[[UIColor darkGrayColor] CGColor]];
+    lastSelectedLandmark=_landmark;
     
 }
 @end

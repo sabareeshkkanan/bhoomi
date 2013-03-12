@@ -8,8 +8,8 @@
 
 #import "Location.h"
 #import "AREvents.h"
-#import "angleAnalyzer.h"
-#import "ARPointInPoly.h"
+#import "landmarkState.h"
+#import "ARPointInPolygon.h"
 #import <EventKit/EventKit.h>
 #import <QuartzCore/QuartzCore.h>
 @protocol buttonEvent <NSObject>
@@ -20,9 +20,9 @@
 {
     __weak id<buttonEvent> delegate;
   
-    NSArray *temploc;
-    NSArray *location;
-    NSNumber *LargeAngle,*state,*minimumdistance;
+   
+    NSArray *Locations;
+    NSNumber *LargestAngle,*state,*minimumdistance;
     int Selected1,Seleceted2;
     float a1,a2;
     UIButton *button;
@@ -42,9 +42,8 @@
 
 -(id)initwithdata:(NSArray*) data;
 //-(id)init:(double)x1:(double)y1:(double)x2:(double)y2:(double)x3:(double)y3:(double)x4:(double)y4;
--(void)calculateAngle:(CLLocation*)start;
--(void)ComputeByGps:(CLLocation*)currentLocation;
--(void)ComputeByHeading:(double)heading;
+-(void)analyzeWithSensorData:(CLLocation*)currentLocation :(double)compassHeading;
+
 -(void)buttonPriority:(int)y;
 -(void)sortEventsbyDate;
 -(void)buttonlayer:(CGColorRef)buttoncolor;

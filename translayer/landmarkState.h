@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface angleAnalyzer : NSObject
+@interface landmarkState : NSObject
 {
-    float range,angle1,angle2;int state;
+    float range,angle1,angle2;
 }
+@property int State;
 -(id)Analyze:(float)Range :(float)Angle1 :(float)Angle2;
--(int)State;
--(float)Angle;
+
 @end

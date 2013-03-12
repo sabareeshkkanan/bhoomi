@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Location.h"
 
-@interface ARPointInPoly : NSObject
+@interface ARPointInPolygon : NSObject
 {
     NSArray *quad;
     CLLocation *pt;

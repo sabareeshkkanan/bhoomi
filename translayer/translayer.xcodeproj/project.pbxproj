@@ -50,12 +50,12 @@
 		6353F05C1653EB51005DCE6B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6353F05B1653EB51005DCE6B /* CoreLocation.framework */; };
 		6353F05E1653EB5C005DCE6B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6353F05D1653EB5C005DCE6B /* CoreMotion.framework */; };
 		6353F0601653EB70005DCE6B /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6353F05F1653EB70005DCE6B /* EventKit.framework */; };
-		637123CC16AF040F001F5AC5 /* ARPointInPoly.m in Sources */ = {isa = PBXBuildFile; fileRef = 637123CB16AF040F001F5AC5 /* ARPointInPoly.m */; };
+		637123CC16AF040F001F5AC5 /* ARPointInPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 637123CB16AF040F001F5AC5 /* ARPointInPolygon.m */; };
 		63B050BF164ED480000B9806 /* ARLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B050BE164ED480000B9806 /* ARLabel.m */; };
 		63B050D31650B763000B9806 /* ARCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B050D21650B763000B9806 /* ARCloud.m */; };
 		63B3BFA8164C562700BD62C7 /* ARVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3BFA7164C562700BD62C7 /* ARVideo.m */; };
 		63E7F064165AC2CE00C3D62A /* Oracle.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E7F063165AC2CE00C3D62A /* Oracle.m */; };
-		63E8741C166068720081D662 /* angleAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8741B166068720081D662 /* angleAnalyzer.m */; };
+		63E8741C166068720081D662 /* landmarkState.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8741B166068720081D662 /* landmarkState.m */; };
 		63E8742B16611A400081D662 /* LandmarkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8742A16611A400081D662 /* LandmarkController.m */; };
 		63EFBD211688DF010056D4C3 /* plane3.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 63EFBD1F1688DF010056D4C3 /* plane3.mtl */; };
 		63EFBD221688DF010056D4C3 /* plane3.obj in Resources */ = {isa = PBXBuildFile; fileRef = 63EFBD201688DF010056D4C3 /* plane3.obj */; };
@@ -110,7 +110,7 @@
 		63066A4916893D9F00D1A786 /* texture1-128.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texture1-128.pvr4"; sourceTree = "<group>"; };
 		63066A4A16893D9F00D1A786 /* uvcube2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uvcube2.mtl; sourceTree = "<group>"; };
 		63066A4B16893D9F00D1A786 /* uvcube2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uvcube2.obj; sourceTree = "<group>"; };
-		630FC2801621E52800942E4A /* translayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = translayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		630FC2801621E52800942E4A /* Earth Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Earth Events.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		630FC2841621E52800942E4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		630FC2861621E52800942E4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		630FC2881621E52800942E4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,8 +147,8 @@
 		6353F05B1653EB51005DCE6B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6353F05D1653EB5C005DCE6B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		6353F05F1653EB70005DCE6B /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		637123CA16AF040F001F5AC5 /* ARPointInPoly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPointInPoly.h; sourceTree = "<group>"; };
-		637123CB16AF040F001F5AC5 /* ARPointInPoly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARPointInPoly.m; sourceTree = "<group>"; };
+		637123CA16AF040F001F5AC5 /* ARPointInPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPointInPolygon.h; sourceTree = "<group>"; };
+		637123CB16AF040F001F5AC5 /* ARPointInPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARPointInPolygon.m; sourceTree = "<group>"; };
 		63B050BD164ED480000B9806 /* ARLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARLabel.h; sourceTree = "<group>"; };
 		63B050BE164ED480000B9806 /* ARLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLabel.m; sourceTree = "<group>"; };
 		63B050D11650B763000B9806 /* ARCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCloud.h; sourceTree = "<group>"; };
@@ -157,8 +157,8 @@
 		63B3BFA7164C562700BD62C7 /* ARVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARVideo.m; sourceTree = "<group>"; };
 		63E7F062165AC2CD00C3D62A /* Oracle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oracle.h; sourceTree = "<group>"; };
 		63E7F063165AC2CE00C3D62A /* Oracle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Oracle.m; sourceTree = "<group>"; };
-		63E8741A166068720081D662 /* angleAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = angleAnalyzer.h; sourceTree = "<group>"; };
-		63E8741B166068720081D662 /* angleAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = angleAnalyzer.m; sourceTree = "<group>"; };
+		63E8741A166068720081D662 /* landmarkState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = landmarkState.h; sourceTree = "<group>"; };
+		63E8741B166068720081D662 /* landmarkState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = landmarkState.m; sourceTree = "<group>"; };
 		63E8742916611A400081D662 /* LandmarkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkController.h; sourceTree = "<group>"; };
 		63E8742A16611A400081D662 /* LandmarkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandmarkController.m; sourceTree = "<group>"; };
 		63EFBD1F1688DF010056D4C3 /* plane3.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane3.mtl; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		630FC2811621E52800942E4A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				630FC2801621E52800942E4A /* translayer.app */,
+				630FC2801621E52800942E4A /* Earth Events.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,10 +309,10 @@
 				632BADDD16569DDE001423DA /* Location.m */,
 				632BADDF16569E50001423DA /* Landmark.h */,
 				632BADE016569E50001423DA /* Landmark.m */,
-				637123CA16AF040F001F5AC5 /* ARPointInPoly.h */,
-				637123CB16AF040F001F5AC5 /* ARPointInPoly.m */,
-				63E8741A166068720081D662 /* angleAnalyzer.h */,
-				63E8741B166068720081D662 /* angleAnalyzer.m */,
+				637123CA16AF040F001F5AC5 /* ARPointInPolygon.h */,
+				637123CB16AF040F001F5AC5 /* ARPointInPolygon.m */,
+				63E8741A166068720081D662 /* landmarkState.h */,
+				63E8741B166068720081D662 /* landmarkState.m */,
 				632BADE216569EAF001423DA /* SensorData.h */,
 				632BADE316569EAF001423DA /* SensorData.m */,
 				63E7F062165AC2CD00C3D62A /* Oracle.h */,
@@ -459,9 +459,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		630FC27F1621E52800942E4A /* translayer */ = {
+		630FC27F1621E52800942E4A /* Earth Events */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 630FC2A71621E52800942E4A /* Build configuration list for PBXNativeTarget "translayer" */;
+			buildConfigurationList = 630FC2A71621E52800942E4A /* Build configuration list for PBXNativeTarget "Earth Events" */;
 			buildPhases = (
 				630FC27C1621E52800942E4A /* Sources */,
 				630FC27D1621E52800942E4A /* Frameworks */,
@@ -471,9 +471,9 @@
 			);
 			dependencies = (
 			);
-			name = translayer;
+			name = "Earth Events";
 			productName = translayer;
-			productReference = 630FC2801621E52800942E4A /* translayer.app */;
+			productReference = 630FC2801621E52800942E4A /* Earth Events.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -498,7 +498,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				630FC27F1621E52800942E4A /* translayer */,
+				630FC27F1621E52800942E4A /* Earth Events */,
 			);
 		};
 /* End PBXProject section */
@@ -567,7 +567,7 @@
 				63F3B9CF165D932B006E22DE /* ARMedia.m in Sources */,
 				63F0B63C165DE4AD00B9D9A3 /* TableViewController.m in Sources */,
 				63F0B640165DF3F100B9D9A3 /* DetailViewController.m in Sources */,
-				63E8741C166068720081D662 /* angleAnalyzer.m in Sources */,
+				63E8741C166068720081D662 /* landmarkState.m in Sources */,
 				63E8742B16611A400081D662 /* LandmarkController.m in Sources */,
 				63066A36168930F100D1A786 /* gluLookAt.m in Sources */,
 				63066A37168930F100D1A786 /* GLView.m in Sources */,
@@ -576,7 +576,7 @@
 				63066A3A168930F100D1A786 /* OpenGLWaveFrontGroup.m in Sources */,
 				63066A3B168930F100D1A786 /* OpenGLWaveFrontMaterial.m in Sources */,
 				63066A3C168930F100D1A786 /* OpenGLWaveFrontObject.m in Sources */,
-				637123CC16AF040F001F5AC5 /* ARPointInPoly.m in Sources */,
+				637123CC16AF040F001F5AC5 /* ARPointInPolygon.m in Sources */,
 				63F624DA16B4BD1900148ACA /* init.js in Sources */,
 				63F624DB16B4BD1900148ACA /* json2.js in Sources */,
 			);
@@ -694,7 +694,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		630FC2A71621E52800942E4A /* Build configuration list for PBXNativeTarget "translayer" */ = {
+		630FC2A71621E52800942E4A /* Build configuration list for PBXNativeTarget "Earth Events" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				630FC2A81621E52800942E4A /* Debug */,

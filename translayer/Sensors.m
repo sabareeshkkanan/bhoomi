@@ -37,7 +37,7 @@ const double radconst=1.57079633;
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     CLLocation *fakelocation=[[CLLocation alloc] initWithLatitude:33.12914631901343 longitude:-117.15909898281097];
      [data setGps:fakelocation];
-[data setGps:newLocation];
+//[data setGps:newLocation];
     
        
     

@@ -71,7 +71,7 @@
 }
 -(void)OnDownload:(NSData *)thedata :(int)url
 {
-  //  NSLog(@"%@",[[NSString alloc] initWithData:thedata encoding:NSUTF8StringEncoding]);
+    NSLog(@"%@",[[NSString alloc] initWithData:thedata encoding:NSUTF8StringEncoding]);
     data=[NSJSONSerialization JSONObjectWithData:thedata options:0 error:nil];
   
     [self createQuad:data];

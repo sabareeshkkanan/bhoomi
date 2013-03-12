@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 DreamPowers. All rights reserved.
 //
 
-#import "ARPointInPoly.h"
+#import "ARPointInPolygon.h"
 
-@implementation ARPointInPoly
+@implementation ARPointInPolygon
 
   
 -(double)vertx:(int)i
