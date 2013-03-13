@@ -10,13 +10,13 @@
 #import "ARCloud.h"
 #import "AREvents.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface DetailViewController : UIViewController<CloudResponse>
 {
     
    
     UIScrollView *scroll;
-   // MPMoviePlayerController *movie;
     NSMutableArray *imageviews;
    
     int yOrigin;
@@ -24,7 +24,6 @@
    
   
 }
-//@property(nonatomic,strong)MPMoviePlayerController *movie;
 @property(nonatomic,retain)AREvents *event;
 @property(nonatomic,retain) MPMoviePlayerController *movie;
 -(void)loadNewEvent;

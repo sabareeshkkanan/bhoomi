@@ -16,24 +16,16 @@
 @interface LandmarkController : NSObject<CloudUpdate,buttonEvent>
 {
     Oracle *_oracle;
-    
-
+    GLViewController *controller;
+    GLView *glView ;
     
     NSArray *landmarks;
     NSArray *threeD;
-    
-
-  
-    GLViewController *controller;
-  
-    GLView *glView ;
+    CGRect bound;
+   
     UIView *wrapperView;
     UIView *buttonsView;
-    
-    
-    CGRect bound;
-    Landmark *lastSelectedLandmark;
-  
+   
 }
 @property UIView *wrapperView;
 @property(nonatomic,retain)Oracle *_oracle;

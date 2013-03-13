@@ -18,111 +18,108 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
+    
     size=CGSizeMake(500, 500);
-    scroll=[[UIScrollView alloc] initWithFrame:CGRectMake(140, 100, 500, 600)];
-    [scroll setBackgroundColor:[UIColor clearColor]];
+    scroll=[[UIScrollView alloc] initWithFrame:CGRectMake(140, 150, 520, 600)];
+    [scroll setBackgroundColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.9]];
+    scroll.layer.cornerRadius = 8;
+    scroll.layer.masksToBounds=YES;
     scroll.showsVerticalScrollIndicator=YES;
-    [scroll setPagingEnabled:YES];
     imageviews=[[NSMutableArray alloc] init];
-    yOrigin=0;
+    yOrigin=5;
     if([event.eventType isEqualToString:@"personal"])
         [self loadPersonalEvent];
     else
       [self loadNewEvent];
     [self.view addSubview:scroll];
-  
-    
-	// Do any additional setup after loading the view.
 }
 -(void)loadPersonalEvent
 {
-    [self addLabel:[event name]];
-    NSString *content=[NSString stringWithFormat:@"%s%@ \n %s%@ \n%@","Start Date : ",event._startDate,"End Date : ",event._endDate,event.notes];
+    [self setTitle:[event name]];
     
-    UITextView *textView=[[UITextView alloc] initWithFrame:CGRectMake(0, yOrigin, size.width, 30)];
-    
-    
-    [textView setText:content];
-    float numlines=2;
-    [textView setFrame:CGRectMake(0, yOrigin, size.width, 30*numlines)];
-    [self addtoY:30*numlines];
-    [textView setScrollEnabled:YES];
-    [scroll addSubview:textView];
+    if([event.notes length]>0)
+    [self mediawithData:event.notes: [ UIFont boldSystemFontOfSize: 14 ]];
 
 }
 -(void)loadNewEvent
 {
-    
     [self setTitle:[event name]];
     
-    if(event._startDate)
-    {
-    NSString *content=[NSString stringWithFormat:@"%s%@ \n %s%@ \n%@","Start Date : ",event._startDate,"End Date : ",event._endDate,event.notes];
-    UITextView *textView=[[UITextView alloc] initWithFrame:CGRectMake(0, yOrigin, size.width, 30)];
-    
-    
-    [textView setText:content];
-        float numlines=2;
-    [textView setFrame:CGRectMake(0, yOrigin, size.width, 30*numlines)];
-    [self addtoY:30*numlines];
-    [textView setScrollEnabled:YES];
-    [scroll addSubview:textView];
+    UIColor *labelcolor=[UIColor colorWithRed:0.4 green:0.5 blue:0.9 alpha:0.9];
+    [self addLabel:event.dates:labelcolor:NSTextAlignmentCenter];
 
-    }
-    [self mediawithData:[event _description]];
-    
+    if([event._description length]>0)
+    [self mediawithData:[event _description]: [ UIFont systemFontOfSize: 14 ]];
+    if([event.notes length]>0)
+    [self mediawithData:[event notes]:[UIFont boldSystemFontOfSize: 14 ]];
+  
     for(ARMedia* media in [event valueForKey:@"media"]){
         if([[media type] isEqualToString:@"Video"])
             [self mediawithVideo:media];
         else if ([[media type]isEqualToString:@"Image"])
             [self mediawithImage:media];
-        
     }
-    scroll.contentSize=CGSizeMake(500, yOrigin);
+    
+    scroll.contentSize=CGSizeMake(500, yOrigin+50);
     
 }
--(void)mediawithData:(NSString*)data{
-     UITextView *textView=[[UITextView alloc] initWithFrame:CGRectMake(0, yOrigin, size.width, 30)];
+-(void)mediawithData:(NSString*)data :(UIFont*)font{
+    
+     CGSize sizeOfText=[data sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(size.width, CGFLOAT_MAX) lineBreakMode:NSLineBreakByWordWrapping];
+    
+     UITextView *textView=[[UITextView alloc] initWithFrame:CGRectMake(10, yOrigin, size.width, sizeOfText.height+30)];
         [textView setText:data];
-    float numlines=5;
-    [textView setFrame:CGRectMake(0, yOrigin, size.width, 30*numlines)];
-    [self addtoY:30*numlines];
+    [textView setEditable:NO];
+    [ textView setFont:font];
 
+    textView.layer.cornerRadius=8;
+    [self addtoY: sizeOfText.height+30];
+    [textView setDataDetectorTypes:UIDataDetectorTypeLink];
     [textView setScrollEnabled:YES];
     [scroll addSubview:textView];
 }
 -(void)mediawithVideo:(ARMedia*)video{
-    [self addLabel:[video name]];
+    UIColor *labelColor=[UIColor colorWithRed:0.9 green:0.5 blue:0.0 alpha:0.9];
+    [self addLabel:[video name]:labelColor:NSTextAlignmentCenter];
     NSURL *url=[[NSURL alloc] initWithString:[video url]];
     movie=[[MPMoviePlayerController alloc] initWithContentURL:url];
-    [movie.view setFrame:CGRectMake(0, yOrigin, size.width, size.height)];
+    [movie.view setFrame:CGRectMake(10, yOrigin, size.width, size.height)];
     [movie prepareToPlay];
     [self addtoY:size.height];
    
     movie.fullscreen=YES;
     movie.shouldAutoplay=NO;
-    movie.allowsAirPlay=YES;
-    movie.controlStyle=MPMovieControlStyleEmbedded;
+       movie.controlStyle=MPMovieControlStyleEmbedded;
+    [movie.view.layer setCornerRadius:8];
+    [movie.view.layer setMasksToBounds:YES];
      [scroll addSubview:movie.view];
 }
 -(void)mediawithImage:(ARMedia*)img{
-    
-    [self addLabel:[img name]];
-     UIImageView *imageview=[[UIImageView alloc] initWithFrame:CGRectMake(0, yOrigin, size.width, size.height)];
+    UIColor *labelColor=[UIColor colorWithRed:0.9 green:0.5 blue:0.0 alpha:0.9];
+    [self addLabel:[img name]:labelColor:NSTextAlignmentCenter];
+     UIImageView *imageview=[[UIImageView alloc] initWithFrame:CGRectMake(10, yOrigin, size.width, size.height)];
     [imageviews addObject:imageview];
     [self addtoY:size.height];
    ARCloud* cloud=[[ARCloud alloc] init];
     [cloud setDelegate:self];
-
+    [imageview.layer setCornerRadius:8];
+    [imageview.layer setMasksToBounds:YES];
     [cloud request:[img url]:[imageviews count]];
     [scroll addSubview:imageview];
 }
--(void)addLabel:(NSString*)txt
+-(void)addLabel:(NSString*)txt :(UIColor*)bgcolor :(NSTextAlignment)alignment
 {
-    UILabel *Label=[[UILabel alloc] initWithFrame:CGRectMake(0, yOrigin, size.width, 30)];
-    [self addtoY:30];
+    CGSize sizeOfText=[txt sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(size.width, CGFLOAT_MAX) lineBreakMode:NSLineBreakByWordWrapping];
+    
+    UILabel *Label=[[UILabel alloc] initWithFrame:CGRectMake(10, yOrigin, size.width, sizeOfText.height+30)];
+    Label.numberOfLines=0;
+    Label.layer.cornerRadius=8;
+    
+    [self addtoY:sizeOfText.height+30];
+    [Label  setBackgroundColor:bgcolor];
     [Label setText:txt];
-    [Label setTextAlignment:NSTextAlignmentCenter];
+    [Label setTextAlignment:alignment];
     [scroll addSubview:Label];
 }
 -(void)addtoY:(int)y

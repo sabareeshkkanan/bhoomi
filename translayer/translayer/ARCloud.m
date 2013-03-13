@@ -28,7 +28,7 @@
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:[NSString stringWithFormat:@"%d", [jsonData length]] forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody: jsonData];
-    NSLog(@"%@",json);
+   // NSLog(@"%@",json);
    (void) [[NSURLConnection alloc] initWithRequest:request delegate:self];
    
 }
@@ -51,6 +51,12 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     NSLog(@"%@",error);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No network connection"
+                                                    message:@"You must be connected to the internet to use this app."
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection

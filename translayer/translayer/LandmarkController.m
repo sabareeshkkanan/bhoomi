@@ -121,9 +121,7 @@
    
     [tableViewController loadnewQuad:_landmark];
     [wrapperView addSubview:navigationController.view];
-    if(lastSelectedLandmark)
-        [lastSelectedLandmark buttonlayer:[[UIColor darkGrayColor] CGColor]];
-    lastSelectedLandmark=_landmark;
-    
+   
+       
 }
 @end

@@ -14,7 +14,7 @@
 {
     UITableView *tableView;
     Landmark* theQuad;
- 
+    bool empty;
 }
 @property(nonatomic,strong)Landmark *theQuad;
 @property(nonatomic,retain)UITableView *tableView;
