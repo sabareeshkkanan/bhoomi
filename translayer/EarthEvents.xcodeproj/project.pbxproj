@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		630FC2851621E52800942E4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FC2841621E52800942E4A /* UIKit.framework */; };
+		630FC2871621E52800942E4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FC2861621E52800942E4A /* Foundation.framework */; };
+		630FC2891621E52800942E4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FC2881621E52800942E4A /* CoreGraphics.framework */; };
+		630FC28F1621E52800942E4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 630FC28D1621E52800942E4A /* InfoPlist.strings */; };
+		630FC2911621E52800942E4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 630FC2901621E52800942E4A /* main.m */; };
+		630FC2951621E52800942E4A /* ARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 630FC2941621E52800942E4A /* ARAppDelegate.m */; };
+		630FC29B1621E52800942E4A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 630FC29A1621E52800942E4A /* Default-568h@2x.png */; };
+		630FC2A11621E52800942E4A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630FC29F1621E52800942E4A /* MainStoryboard_iPad.storyboard */; };
+		630FC2AB1621E54100942E4A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FC2AA1621E54100942E4A /* AVFoundation.framework */; };
+		630FC2AD1621E54700942E4A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FC2AC1621E54700942E4A /* CoreVideo.framework */; };
+		630FC2B61621F25200942E4A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FC2B51621F25200942E4A /* CoreMedia.framework */; };
+		630FC2B8162242C400942E4A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FC2B7162242C400942E4A /* OpenGLES.framework */; };
+		630FC2BA162242CB00942E4A /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FC2B9162242CB00942E4A /* GLKit.framework */; };
+		633991CA1625100B00600E68 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633991C91625100B00600E68 /* QuartzCore.framework */; };
+		6342A5C616F4094A002B1D89 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5C516F4094A002B1D89 /* Camera.m */; };
+		6342A5D016F409FC002B1D89 /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5C916F409FC002B1D89 /* ARViewController.m */; };
+		6342A5D116F409FC002B1D89 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5CB16F409FC002B1D89 /* DetailViewController.m */; };
+		6342A5D316F409FC002B1D89 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5CF16F409FC002B1D89 /* TableViewController.m */; };
+		6342A5DB16F40A6B002B1D89 /* AREvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5D616F40A6B002B1D89 /* AREvents.m */; };
+		6342A5DC16F40A6B002B1D89 /* ARMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5D816F40A6B002B1D89 /* ARMedia.m */; };
+		6342A5DD16F40A6B002B1D89 /* calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5DA16F40A6B002B1D89 /* calendar.m */; };
+		6342A5EF16F40BF1002B1D89 /* gluLookAt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5E116F40BF1002B1D89 /* gluLookAt.m */; };
+		6342A5F016F40BF1002B1D89 /* GLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5E316F40BF1002B1D89 /* GLView.m */; };
+		6342A5F116F40BF1002B1D89 /* GLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5E516F40BF1002B1D89 /* GLViewController.m */; };
+		6342A5F216F40BF1002B1D89 /* OpenGLTexture3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5E716F40BF1002B1D89 /* OpenGLTexture3D.m */; };
+		6342A5F316F40BF1002B1D89 /* OpenGLWaveFrontGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5EA16F40BF1002B1D89 /* OpenGLWaveFrontGroup.m */; };
+		6342A5F416F40BF1002B1D89 /* OpenGLWaveFrontMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5EC16F40BF1002B1D89 /* OpenGLWaveFrontMaterial.m */; };
+		6342A5F516F40BF1002B1D89 /* OpenGLWaveFrontObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5EE16F40BF1002B1D89 /* OpenGLWaveFrontObject.m */; };
+		6342A5F916F40C07002B1D89 /* ARCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5F816F40C07002B1D89 /* ARCloud.m */; };
+		6342A60316F40C18002B1D89 /* ARPointInPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5FC16F40C18002B1D89 /* ARPointInPolygon.m */; };
+		6342A60416F40C18002B1D89 /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5FE16F40C18002B1D89 /* Landmark.m */; };
+		6342A60516F40C18002B1D89 /* landmarkState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A60016F40C18002B1D89 /* landmarkState.m */; };
+		6342A60616F40C18002B1D89 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A60216F40C18002B1D89 /* Location.m */; };
+		6342A60A16F40C24002B1D89 /* Oracle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A60916F40C24002B1D89 /* Oracle.m */; };
+		6342A61016F40C2C002B1D89 /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A60D16F40C2C002B1D89 /* SensorData.m */; };
+		6342A61116F40C2C002B1D89 /* Sensors.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A60F16F40C2C002B1D89 /* Sensors.m */; };
+		6342A61916F40C8B002B1D89 /* ARVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A61816F40C8B002B1D89 /* ARVideo.m */; };
+		6342A61C16F40CF0002B1D89 /* LandmarkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A61B16F40CF0002B1D89 /* LandmarkController.m */; };
+		6342A61E16F413F1002B1D89 /* 600px-Earth_Western_Hemisphere_transparent_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6342A61D16F413F1002B1D89 /* 600px-Earth_Western_Hemisphere_transparent_background.png */; };
+		6342A62016F4158C002B1D89 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6342A61F16F4158C002B1D89 /* Default-Portrait@2x~ipad.png */; };
+		6353F05C1653EB51005DCE6B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6353F05B1653EB51005DCE6B /* CoreLocation.framework */; };
+		6353F05E1653EB5C005DCE6B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6353F05D1653EB5C005DCE6B /* CoreMotion.framework */; };
+		6353F0601653EB70005DCE6B /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6353F05F1653EB70005DCE6B /* EventKit.framework */; };
+		63F0B647165DFAAA00B9D9A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F0B646165DFAAA00B9D9A3 /* MediaPlayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		630FC2801621E52800942E4A /* Earth Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Earth Events.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		630FC2841621E52800942E4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		630FC2861621E52800942E4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		630FC2881621E52800942E4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		630FC28C1621E52800942E4A /* EarthEvents-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EarthEvents-Info.plist"; sourceTree = "<group>"; };
+		630FC28E1621E52800942E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		630FC2901621E52800942E4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		630FC2921621E52800942E4A /* EarthEvents-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EarthEvents-Prefix.pch"; sourceTree = "<group>"; };
+		630FC2931621E52800942E4A /* ARAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARAppDelegate.h; sourceTree = "<group>"; };
+		630FC2941621E52800942E4A /* ARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
+		630FC2961621E52800942E4A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		630FC2981621E52800942E4A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		630FC29A1621E52800942E4A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		630FC2A01621E52800942E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		630FC2AA1621E54100942E4A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		630FC2AC1621E54700942E4A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		630FC2B51621F25200942E4A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		630FC2B7162242C400942E4A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		630FC2B9162242CB00942E4A /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		633991C91625100B00600E68 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6342A5C416F4094A002B1D89 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		6342A5C516F4094A002B1D89 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
+		6342A5C816F409FC002B1D89 /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
+		6342A5C916F409FC002B1D89 /* ARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
+		6342A5CA16F409FC002B1D89 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		6342A5CB16F409FC002B1D89 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		6342A5CE16F409FC002B1D89 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		6342A5CF16F409FC002B1D89 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		6342A5D516F40A6B002B1D89 /* AREvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AREvents.h; sourceTree = "<group>"; };
+		6342A5D616F40A6B002B1D89 /* AREvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AREvents.m; sourceTree = "<group>"; };
+		6342A5D716F40A6B002B1D89 /* ARMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMedia.h; sourceTree = "<group>"; };
+		6342A5D816F40A6B002B1D89 /* ARMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMedia.m; sourceTree = "<group>"; };
+		6342A5D916F40A6B002B1D89 /* calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendar.h; sourceTree = "<group>"; };
+		6342A5DA16F40A6B002B1D89 /* calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendar.m; sourceTree = "<group>"; };
+		6342A5DF16F40BF1002B1D89 /* ConstantsAndMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantsAndMacros.h; sourceTree = "<group>"; };
+		6342A5E016F40BF1002B1D89 /* gluLookAt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gluLookAt.h; sourceTree = "<group>"; };
+		6342A5E116F40BF1002B1D89 /* gluLookAt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gluLookAt.m; sourceTree = "<group>"; };
+		6342A5E216F40BF1002B1D89 /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
+		6342A5E316F40BF1002B1D89 /* GLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLView.m; sourceTree = "<group>"; };
+		6342A5E416F40BF1002B1D89 /* GLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLViewController.h; sourceTree = "<group>"; };
+		6342A5E516F40BF1002B1D89 /* GLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLViewController.m; sourceTree = "<group>"; };
+		6342A5E616F40BF1002B1D89 /* OpenGLTexture3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLTexture3D.h; sourceTree = "<group>"; };
+		6342A5E716F40BF1002B1D89 /* OpenGLTexture3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLTexture3D.m; sourceTree = "<group>"; };
+		6342A5E816F40BF1002B1D89 /* OpenGLWaveFrontCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLWaveFrontCommon.h; sourceTree = "<group>"; };
+		6342A5E916F40BF1002B1D89 /* OpenGLWaveFrontGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLWaveFrontGroup.h; sourceTree = "<group>"; };
+		6342A5EA16F40BF1002B1D89 /* OpenGLWaveFrontGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLWaveFrontGroup.m; sourceTree = "<group>"; };
+		6342A5EB16F40BF1002B1D89 /* OpenGLWaveFrontMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLWaveFrontMaterial.h; sourceTree = "<group>"; };
+		6342A5EC16F40BF1002B1D89 /* OpenGLWaveFrontMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLWaveFrontMaterial.m; sourceTree = "<group>"; };
+		6342A5ED16F40BF1002B1D89 /* OpenGLWaveFrontObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLWaveFrontObject.h; sourceTree = "<group>"; };
+		6342A5EE16F40BF1002B1D89 /* OpenGLWaveFrontObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLWaveFrontObject.m; sourceTree = "<group>"; };
+		6342A5F716F40C07002B1D89 /* ARCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCloud.h; sourceTree = "<group>"; };
+		6342A5F816F40C07002B1D89 /* ARCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCloud.m; sourceTree = "<group>"; };
+		6342A5FB16F40C18002B1D89 /* ARPointInPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPointInPolygon.h; sourceTree = "<group>"; };
+		6342A5FC16F40C18002B1D89 /* ARPointInPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARPointInPolygon.m; sourceTree = "<group>"; };
+		6342A5FD16F40C18002B1D89 /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landmark.h; sourceTree = "<group>"; };
+		6342A5FE16F40C18002B1D89 /* Landmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmark.m; sourceTree = "<group>"; };
+		6342A5FF16F40C18002B1D89 /* landmarkState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = landmarkState.h; sourceTree = "<group>"; };
+		6342A60016F40C18002B1D89 /* landmarkState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = landmarkState.m; sourceTree = "<group>"; };
+		6342A60116F40C18002B1D89 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		6342A60216F40C18002B1D89 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		6342A60816F40C24002B1D89 /* Oracle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oracle.h; sourceTree = "<group>"; };
+		6342A60916F40C24002B1D89 /* Oracle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Oracle.m; sourceTree = "<group>"; };
+		6342A60C16F40C2C002B1D89 /* SensorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorData.h; sourceTree = "<group>"; };
+		6342A60D16F40C2C002B1D89 /* SensorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorData.m; sourceTree = "<group>"; };
+		6342A60E16F40C2C002B1D89 /* Sensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sensors.h; sourceTree = "<group>"; };
+		6342A60F16F40C2C002B1D89 /* Sensors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sensors.m; sourceTree = "<group>"; };
+		6342A61716F40C8B002B1D89 /* ARVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARVideo.h; sourceTree = "<group>"; };
+		6342A61816F40C8B002B1D89 /* ARVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARVideo.m; sourceTree = "<group>"; };
+		6342A61A16F40CF0002B1D89 /* LandmarkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkController.h; sourceTree = "<group>"; };
+		6342A61B16F40CF0002B1D89 /* LandmarkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandmarkController.m; sourceTree = "<group>"; };
+		6342A61D16F413F1002B1D89 /* 600px-Earth_Western_Hemisphere_transparent_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "600px-Earth_Western_Hemisphere_transparent_background.png"; path = "../600px-Earth_Western_Hemisphere_transparent_background.png"; sourceTree = "<group>"; };
+		6342A61F16F4158C002B1D89 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		6353F05B1653EB51005DCE6B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6353F05D1653EB5C005DCE6B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		6353F05F1653EB70005DCE6B /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		63F0B646165DFAAA00B9D9A3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		630FC27D1621E52800942E4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63F0B647165DFAAA00B9D9A3 /* MediaPlayer.framework in Frameworks */,
+				6353F0601653EB70005DCE6B /* EventKit.framework in Frameworks */,
+				6353F05E1653EB5C005DCE6B /* CoreMotion.framework in Frameworks */,
+				6353F05C1653EB51005DCE6B /* CoreLocation.framework in Frameworks */,
+				633991CA1625100B00600E68 /* QuartzCore.framework in Frameworks */,
+				630FC2BA162242CB00942E4A /* GLKit.framework in Frameworks */,
+				630FC2B8162242C400942E4A /* OpenGLES.framework in Frameworks */,
+				630FC2B61621F25200942E4A /* CoreMedia.framework in Frameworks */,
+				630FC2AD1621E54700942E4A /* CoreVideo.framework in Frameworks */,
+				630FC2AB1621E54100942E4A /* AVFoundation.framework in Frameworks */,
+				630FC2851621E52800942E4A /* UIKit.framework in Frameworks */,
+				630FC2871621E52800942E4A /* Foundation.framework in Frameworks */,
+				630FC2891621E52800942E4A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		630FC2751621E52800942E4A = {
+			isa = PBXGroup;
+			children = (
+				630FC28A1621E52800942E4A /* Earth Events */,
+				630FC2831621E52800942E4A /* Frameworks */,
+				630FC2811621E52800942E4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		630FC2811621E52800942E4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				630FC2801621E52800942E4A /* Earth Events.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		630FC2831621E52800942E4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63F0B646165DFAAA00B9D9A3 /* MediaPlayer.framework */,
+				6353F05F1653EB70005DCE6B /* EventKit.framework */,
+				6353F05D1653EB5C005DCE6B /* CoreMotion.framework */,
+				6353F05B1653EB51005DCE6B /* CoreLocation.framework */,
+				630FC2B9162242CB00942E4A /* GLKit.framework */,
+				630FC2B7162242C400942E4A /* OpenGLES.framework */,
+				633991C91625100B00600E68 /* QuartzCore.framework */,
+				630FC2B51621F25200942E4A /* CoreMedia.framework */,
+				630FC2AC1621E54700942E4A /* CoreVideo.framework */,
+				630FC2AA1621E54100942E4A /* AVFoundation.framework */,
+				630FC2841621E52800942E4A /* UIKit.framework */,
+				630FC2861621E52800942E4A /* Foundation.framework */,
+				630FC2881621E52800942E4A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		630FC28A1621E52800942E4A /* Earth Events */ = {
+			isa = PBXGroup;
+			children = (
+				6342A61616F40C8B002B1D89 /* video frames */,
+				6342A60B16F40C2C002B1D89 /* sensor */,
+				6342A60716F40C24002B1D89 /* oracle */,
+				6342A5FA16F40C18002B1D89 /* landmark */,
+				6342A5F616F40C07002B1D89 /* cloud */,
+				6342A5DE16F40BF1002B1D89 /* 3dLoader */,
+				6342A5D416F40A6B002B1D89 /* calendar */,
+				6342A5C716F409FC002B1D89 /* controllers */,
+				6342A5C316F4094A002B1D89 /* camera */,
+				630FC2931621E52800942E4A /* ARAppDelegate.h */,
+				630FC2941621E52800942E4A /* ARAppDelegate.m */,
+				630FC29F1621E52800942E4A /* MainStoryboard_iPad.storyboard */,
+				630FC28B1621E52800942E4A /* Supporting Files */,
+			);
+			name = "Earth Events";
+			path = ../../../../Users/sabareeshkkanan/Desktop/bhoomi/translayer/translayer;
+			sourceTree = DEVELOPER_DIR;
+		};
+		630FC28B1621E52800942E4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6342A61D16F413F1002B1D89 /* 600px-Earth_Western_Hemisphere_transparent_background.png */,
+				630FC28C1621E52800942E4A /* EarthEvents-Info.plist */,
+				6342A61F16F4158C002B1D89 /* Default-Portrait@2x~ipad.png */,
+				630FC28D1621E52800942E4A /* InfoPlist.strings */,
+				630FC2901621E52800942E4A /* main.m */,
+				630FC2921621E52800942E4A /* EarthEvents-Prefix.pch */,
+				630FC2961621E52800942E4A /* Default.png */,
+				630FC2981621E52800942E4A /* Default@2x.png */,
+				630FC29A1621E52800942E4A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6342A5C316F4094A002B1D89 /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				6342A5C416F4094A002B1D89 /* Camera.h */,
+				6342A5C516F4094A002B1D89 /* Camera.m */,
+			);
+			path = camera;
+			sourceTree = "<group>";
+		};
+		6342A5C716F409FC002B1D89 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6342A5C816F409FC002B1D89 /* ARViewController.h */,
+				6342A5C916F409FC002B1D89 /* ARViewController.m */,
+				6342A5CA16F409FC002B1D89 /* DetailViewController.h */,
+				6342A5CB16F409FC002B1D89 /* DetailViewController.m */,
+				6342A5CE16F409FC002B1D89 /* TableViewController.h */,
+				6342A5CF16F409FC002B1D89 /* TableViewController.m */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		6342A5D416F40A6B002B1D89 /* calendar */ = {
+			isa = PBXGroup;
+			children = (
+				6342A5D516F40A6B002B1D89 /* AREvents.h */,
+				6342A5D616F40A6B002B1D89 /* AREvents.m */,
+				6342A5D716F40A6B002B1D89 /* ARMedia.h */,
+				6342A5D816F40A6B002B1D89 /* ARMedia.m */,
+				6342A5D916F40A6B002B1D89 /* calendar.h */,
+				6342A5DA16F40A6B002B1D89 /* calendar.m */,
+			);
+			path = calendar;
+			sourceTree = "<group>";
+		};
+		6342A5DE16F40BF1002B1D89 /* 3dLoader */ = {
+			isa = PBXGroup;
+			children = (
+				6342A5DF16F40BF1002B1D89 /* ConstantsAndMacros.h */,
+				6342A5E016F40BF1002B1D89 /* gluLookAt.h */,
+				6342A5E116F40BF1002B1D89 /* gluLookAt.m */,
+				6342A5E216F40BF1002B1D89 /* GLView.h */,
+				6342A5E316F40BF1002B1D89 /* GLView.m */,
+				6342A5E416F40BF1002B1D89 /* GLViewController.h */,
+				6342A5E516F40BF1002B1D89 /* GLViewController.m */,
+				6342A5E616F40BF1002B1D89 /* OpenGLTexture3D.h */,
+				6342A5E716F40BF1002B1D89 /* OpenGLTexture3D.m */,
+				6342A5E816F40BF1002B1D89 /* OpenGLWaveFrontCommon.h */,
+				6342A5E916F40BF1002B1D89 /* OpenGLWaveFrontGroup.h */,
+				6342A5EA16F40BF1002B1D89 /* OpenGLWaveFrontGroup.m */,
+				6342A5EB16F40BF1002B1D89 /* OpenGLWaveFrontMaterial.h */,
+				6342A5EC16F40BF1002B1D89 /* OpenGLWaveFrontMaterial.m */,
+				6342A5ED16F40BF1002B1D89 /* OpenGLWaveFrontObject.h */,
+				6342A5EE16F40BF1002B1D89 /* OpenGLWaveFrontObject.m */,
+			);
+			path = 3dLoader;
+			sourceTree = "<group>";
+		};
+		6342A5F616F40C07002B1D89 /* cloud */ = {
+			isa = PBXGroup;
+			children = (
+				6342A5F716F40C07002B1D89 /* ARCloud.h */,
+				6342A5F816F40C07002B1D89 /* ARCloud.m */,
+			);
+			path = cloud;
+			sourceTree = "<group>";
+		};
+		6342A5FA16F40C18002B1D89 /* landmark */ = {
+			isa = PBXGroup;
+			children = (
+				6342A61A16F40CF0002B1D89 /* LandmarkController.h */,
+				6342A61B16F40CF0002B1D89 /* LandmarkController.m */,
+				6342A5FB16F40C18002B1D89 /* ARPointInPolygon.h */,
+				6342A5FC16F40C18002B1D89 /* ARPointInPolygon.m */,
+				6342A5FD16F40C18002B1D89 /* Landmark.h */,
+				6342A5FE16F40C18002B1D89 /* Landmark.m */,
+				6342A5FF16F40C18002B1D89 /* landmarkState.h */,
+				6342A60016F40C18002B1D89 /* landmarkState.m */,
+				6342A60116F40C18002B1D89 /* Location.h */,
+				6342A60216F40C18002B1D89 /* Location.m */,
+			);
+			path = landmark;
+			sourceTree = "<group>";
+		};
+		6342A60716F40C24002B1D89 /* oracle */ = {
+			isa = PBXGroup;
+			children = (
+				6342A60816F40C24002B1D89 /* Oracle.h */,
+				6342A60916F40C24002B1D89 /* Oracle.m */,
+			);
+			path = oracle;
+			sourceTree = "<group>";
+		};
+		6342A60B16F40C2C002B1D89 /* sensor */ = {
+			isa = PBXGroup;
+			children = (
+				6342A60C16F40C2C002B1D89 /* SensorData.h */,
+				6342A60D16F40C2C002B1D89 /* SensorData.m */,
+				6342A60E16F40C2C002B1D89 /* Sensors.h */,
+				6342A60F16F40C2C002B1D89 /* Sensors.m */,
+			);
+			path = sensor;
+			sourceTree = "<group>";
+		};
+		6342A61616F40C8B002B1D89 /* video frames */ = {
+			isa = PBXGroup;
+			children = (
+				6342A61716F40C8B002B1D89 /* ARVideo.h */,
+				6342A61816F40C8B002B1D89 /* ARVideo.m */,
+			);
+			path = "video frames";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		630FC27F1621E52800942E4A /* Earth Events */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 630FC2A71621E52800942E4A /* Build configuration list for PBXNativeTarget "Earth Events" */;
+			buildPhases = (
+				630FC27C1621E52800942E4A /* Sources */,
+				630FC27D1621E52800942E4A /* Frameworks */,
+				630FC27E1621E52800942E4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Earth Events";
+			productName = translayer;
+			productReference = 630FC2801621E52800942E4A /* Earth Events.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		630FC2771621E52800942E4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AR;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = DreamPowers;
+			};
+			buildConfigurationList = 630FC27A1621E52800942E4A /* Build configuration list for PBXProject "EarthEvents" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 630FC2751621E52800942E4A;
+			productRefGroup = 630FC2811621E52800942E4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				630FC27F1621E52800942E4A /* Earth Events */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		630FC27E1621E52800942E4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630FC28F1621E52800942E4A /* InfoPlist.strings in Resources */,
+				630FC29B1621E52800942E4A /* Default-568h@2x.png in Resources */,
+				630FC2A11621E52800942E4A /* MainStoryboard_iPad.storyboard in Resources */,
+				6342A61E16F413F1002B1D89 /* 600px-Earth_Western_Hemisphere_transparent_background.png in Resources */,
+				6342A62016F4158C002B1D89 /* Default-Portrait@2x~ipad.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		630FC27C1621E52800942E4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630FC2911621E52800942E4A /* main.m in Sources */,
+				630FC2951621E52800942E4A /* ARAppDelegate.m in Sources */,
+				6342A5C616F4094A002B1D89 /* Camera.m in Sources */,
+				6342A5D016F409FC002B1D89 /* ARViewController.m in Sources */,
+				6342A5D116F409FC002B1D89 /* DetailViewController.m in Sources */,
+				6342A5D316F409FC002B1D89 /* TableViewController.m in Sources */,
+				6342A5DB16F40A6B002B1D89 /* AREvents.m in Sources */,
+				6342A5DC16F40A6B002B1D89 /* ARMedia.m in Sources */,
+				6342A5DD16F40A6B002B1D89 /* calendar.m in Sources */,
+				6342A5EF16F40BF1002B1D89 /* gluLookAt.m in Sources */,
+				6342A5F016F40BF1002B1D89 /* GLView.m in Sources */,
+				6342A5F116F40BF1002B1D89 /* GLViewController.m in Sources */,
+				6342A5F216F40BF1002B1D89 /* OpenGLTexture3D.m in Sources */,
+				6342A5F316F40BF1002B1D89 /* OpenGLWaveFrontGroup.m in Sources */,
+				6342A5F416F40BF1002B1D89 /* OpenGLWaveFrontMaterial.m in Sources */,
+				6342A5F516F40BF1002B1D89 /* OpenGLWaveFrontObject.m in Sources */,
+				6342A5F916F40C07002B1D89 /* ARCloud.m in Sources */,
+				6342A60316F40C18002B1D89 /* ARPointInPolygon.m in Sources */,
+				6342A60416F40C18002B1D89 /* Landmark.m in Sources */,
+				6342A60516F40C18002B1D89 /* landmarkState.m in Sources */,
+				6342A60616F40C18002B1D89 /* Location.m in Sources */,
+				6342A60A16F40C24002B1D89 /* Oracle.m in Sources */,
+				6342A61016F40C2C002B1D89 /* SensorData.m in Sources */,
+				6342A61116F40C2C002B1D89 /* Sensors.m in Sources */,
+				6342A61916F40C8B002B1D89 /* ARVideo.m in Sources */,
+				6342A61C16F40CF0002B1D89 /* LandmarkController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		630FC28D1621E52800942E4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				630FC28E1621E52800942E4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		630FC29F1621E52800942E4A /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				630FC2A01621E52800942E4A /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		630FC2A51621E52800942E4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		630FC2A61621E52800942E4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		630FC2A81621E52800942E4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "translayer/EarthEvents-Prefix.pch";
+				INFOPLIST_FILE = "translayer/EarthEvents-Info.plist";
+				New_Setting = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		630FC2A91621E52800942E4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "translayer/EarthEvents-Prefix.pch";
+				INFOPLIST_FILE = "translayer/EarthEvents-Info.plist";
+				New_Setting = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		630FC27A1621E52800942E4A /* Build configuration list for PBXProject "EarthEvents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				630FC2A51621E52800942E4A /* Debug */,
+				630FC2A61621E52800942E4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		630FC2A71621E52800942E4A /* Build configuration list for PBXNativeTarget "Earth Events" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				630FC2A81621E52800942E4A /* Debug */,
+				630FC2A91621E52800942E4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 630FC2771621E52800942E4A /* Project object */;
+}
