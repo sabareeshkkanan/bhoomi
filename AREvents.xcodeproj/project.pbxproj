@@ -21,11 +21,11 @@
 		630FC2B8162242C400942E4A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FC2B7162242C400942E4A /* OpenGLES.framework */; };
 		630FC2BA162242CB00942E4A /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FC2B9162242CB00942E4A /* GLKit.framework */; };
 		633991CA1625100B00600E68 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633991C91625100B00600E68 /* QuartzCore.framework */; };
-		6342A5C616F4094A002B1D89 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5C516F4094A002B1D89 /* Camera.m */; };
+		6342A5C616F4094A002B1D89 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5C516F4094A002B1D89 /* CameraViewController.m */; };
 		6342A5D016F409FC002B1D89 /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5C916F409FC002B1D89 /* ARViewController.m */; };
 		6342A5D116F409FC002B1D89 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5CB16F409FC002B1D89 /* DetailViewController.m */; };
-		6342A5D316F409FC002B1D89 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5CF16F409FC002B1D89 /* TableViewController.m */; };
-		6342A5DB16F40A6B002B1D89 /* AREvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5D616F40A6B002B1D89 /* AREvents.m */; };
+		6342A5D316F409FC002B1D89 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5CF16F409FC002B1D89 /* EventsViewController.m */; };
+		6342A5DB16F40A6B002B1D89 /* AREvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5D616F40A6B002B1D89 /* AREvent.m */; };
 		6342A5DC16F40A6B002B1D89 /* ARMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5D816F40A6B002B1D89 /* ARMedia.m */; };
 		6342A5DD16F40A6B002B1D89 /* calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5DA16F40A6B002B1D89 /* calendar.m */; };
 		6342A5EF16F40BF1002B1D89 /* gluLookAt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342A5E116F40BF1002B1D89 /* gluLookAt.m */; };
@@ -54,14 +54,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		630FC2801621E52800942E4A /* Earth Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Earth Events.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		630FC2801621E52800942E4A /* AR Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Events.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		630FC2841621E52800942E4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		630FC2861621E52800942E4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		630FC2881621E52800942E4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		630FC28C1621E52800942E4A /* EarthEvents-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EarthEvents-Info.plist"; sourceTree = "<group>"; };
+		630FC28C1621E52800942E4A /* AREvents-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AREvents-Info.plist"; sourceTree = "<group>"; };
 		630FC28E1621E52800942E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		630FC2901621E52800942E4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		630FC2921621E52800942E4A /* EarthEvents-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EarthEvents-Prefix.pch"; sourceTree = "<group>"; };
+		630FC2921621E52800942E4A /* AREvents-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AREvents-Prefix.pch"; sourceTree = "<group>"; };
 		630FC2931621E52800942E4A /* ARAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARAppDelegate.h; sourceTree = "<group>"; };
 		630FC2941621E52800942E4A /* ARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
 		630FC2961621E52800942E4A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -74,16 +74,16 @@
 		630FC2B7162242C400942E4A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		630FC2B9162242CB00942E4A /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		633991C91625100B00600E68 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		6342A5C416F4094A002B1D89 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
-		6342A5C516F4094A002B1D89 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
+		6342A5C416F4094A002B1D89 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		6342A5C516F4094A002B1D89 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		6342A5C816F409FC002B1D89 /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
 		6342A5C916F409FC002B1D89 /* ARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
 		6342A5CA16F409FC002B1D89 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		6342A5CB16F409FC002B1D89 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		6342A5CE16F409FC002B1D89 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		6342A5CF16F409FC002B1D89 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		6342A5D516F40A6B002B1D89 /* AREvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AREvents.h; sourceTree = "<group>"; };
-		6342A5D616F40A6B002B1D89 /* AREvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AREvents.m; sourceTree = "<group>"; };
+		6342A5CE16F409FC002B1D89 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		6342A5CF16F409FC002B1D89 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		6342A5D516F40A6B002B1D89 /* AREvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AREvent.h; sourceTree = "<group>"; };
+		6342A5D616F40A6B002B1D89 /* AREvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AREvent.m; sourceTree = "<group>"; };
 		6342A5D716F40A6B002B1D89 /* ARMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMedia.h; sourceTree = "<group>"; };
 		6342A5D816F40A6B002B1D89 /* ARMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMedia.m; sourceTree = "<group>"; };
 		6342A5D916F40A6B002B1D89 /* calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendar.h; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		630FC2811621E52800942E4A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				630FC2801621E52800942E4A /* Earth Events.app */,
+				630FC2801621E52800942E4A /* AR Events.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,11 +218,11 @@
 			isa = PBXGroup;
 			children = (
 				6342A61D16F413F1002B1D89 /* 600px-Earth_Western_Hemisphere_transparent_background.png */,
-				630FC28C1621E52800942E4A /* EarthEvents-Info.plist */,
+				630FC28C1621E52800942E4A /* AREvents-Info.plist */,
 				6342A61F16F4158C002B1D89 /* Default-Portrait@2x~ipad.png */,
 				630FC28D1621E52800942E4A /* InfoPlist.strings */,
 				630FC2901621E52800942E4A /* main.m */,
-				630FC2921621E52800942E4A /* EarthEvents-Prefix.pch */,
+				630FC2921621E52800942E4A /* AREvents-Prefix.pch */,
 				630FC2961621E52800942E4A /* Default.png */,
 				630FC2981621E52800942E4A /* Default@2x.png */,
 				630FC29A1621E52800942E4A /* Default-568h@2x.png */,
@@ -233,8 +233,8 @@
 		6342A5C316F4094A002B1D89 /* camera */ = {
 			isa = PBXGroup;
 			children = (
-				6342A5C416F4094A002B1D89 /* Camera.h */,
-				6342A5C516F4094A002B1D89 /* Camera.m */,
+				6342A5C416F4094A002B1D89 /* CameraViewController.h */,
+				6342A5C516F4094A002B1D89 /* CameraViewController.m */,
 			);
 			path = camera;
 			sourceTree = "<group>";
@@ -246,8 +246,8 @@
 				6342A5C916F409FC002B1D89 /* ARViewController.m */,
 				6342A5CA16F409FC002B1D89 /* DetailViewController.h */,
 				6342A5CB16F409FC002B1D89 /* DetailViewController.m */,
-				6342A5CE16F409FC002B1D89 /* TableViewController.h */,
-				6342A5CF16F409FC002B1D89 /* TableViewController.m */,
+				6342A5CE16F409FC002B1D89 /* EventsViewController.h */,
+				6342A5CF16F409FC002B1D89 /* EventsViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -255,8 +255,8 @@
 		6342A5D416F40A6B002B1D89 /* calendar */ = {
 			isa = PBXGroup;
 			children = (
-				6342A5D516F40A6B002B1D89 /* AREvents.h */,
-				6342A5D616F40A6B002B1D89 /* AREvents.m */,
+				6342A5D516F40A6B002B1D89 /* AREvent.h */,
+				6342A5D616F40A6B002B1D89 /* AREvent.m */,
 				6342A5D716F40A6B002B1D89 /* ARMedia.h */,
 				6342A5D816F40A6B002B1D89 /* ARMedia.m */,
 				6342A5D916F40A6B002B1D89 /* calendar.h */,
@@ -360,7 +360,7 @@
 			);
 			name = "Earth Events";
 			productName = translayer;
-			productReference = 630FC2801621E52800942E4A /* Earth Events.app */;
+			productReference = 630FC2801621E52800942E4A /* AR Events.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -373,7 +373,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = DreamPowers;
 			};
-			buildConfigurationList = 630FC27A1621E52800942E4A /* Build configuration list for PBXProject "EarthEvents" */;
+			buildConfigurationList = 630FC27A1621E52800942E4A /* Build configuration list for PBXProject "AREvents" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -412,11 +412,11 @@
 			files = (
 				630FC2911621E52800942E4A /* main.m in Sources */,
 				630FC2951621E52800942E4A /* ARAppDelegate.m in Sources */,
-				6342A5C616F4094A002B1D89 /* Camera.m in Sources */,
+				6342A5C616F4094A002B1D89 /* CameraViewController.m in Sources */,
 				6342A5D016F409FC002B1D89 /* ARViewController.m in Sources */,
 				6342A5D116F409FC002B1D89 /* DetailViewController.m in Sources */,
-				6342A5D316F409FC002B1D89 /* TableViewController.m in Sources */,
-				6342A5DB16F40A6B002B1D89 /* AREvents.m in Sources */,
+				6342A5D316F409FC002B1D89 /* EventsViewController.m in Sources */,
+				6342A5DB16F40A6B002B1D89 /* AREvent.m in Sources */,
 				6342A5DC16F40A6B002B1D89 /* ARMedia.m in Sources */,
 				6342A5DD16F40A6B002B1D89 /* calendar.m in Sources */,
 				6342A5EF16F40BF1002B1D89 /* gluLookAt.m in Sources */,
@@ -522,11 +522,11 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EarthEvents/EarthEvents-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/EarthEvents/EarthEvents-Info.plist";
+				GCC_PREFIX_HEADER = "EarthEvents/AREvents-Prefix.pch";
+				INFOPLIST_FILE = "EarthEvents/AREvents-Info.plist";
 				New_Setting = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				PRODUCT_NAME = "AR Events";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -539,11 +539,11 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EarthEvents/EarthEvents-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/EarthEvents/EarthEvents-Info.plist";
+				GCC_PREFIX_HEADER = "EarthEvents/AREvents-Prefix.pch";
+				INFOPLIST_FILE = "EarthEvents/AREvents-Info.plist";
 				New_Setting = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				PRODUCT_NAME = "AR Events";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -551,7 +551,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		630FC27A1621E52800942E4A /* Build configuration list for PBXProject "EarthEvents" */ = {
+		630FC27A1621E52800942E4A /* Build configuration list for PBXProject "AREvents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				630FC2A51621E52800942E4A /* Debug */,

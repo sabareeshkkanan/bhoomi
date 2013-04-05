@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Camera.h"
+#import "CameraViewController.h"
 #import "LandmarkController.h"
 
 @interface ARViewController : UIViewController
 {
       
-    Camera *captureManager;
+    CameraViewController *captureManager;
     UINavigationController *navController;
   
     Landmark *h1;
@@ -23,7 +23,7 @@
     
 }
 
-@property (retain) Camera *captureManager;
+@property (retain) CameraViewController *captureManager;
 @property(nonatomic,retain)LandmarkController *_landmarkController;
 
 

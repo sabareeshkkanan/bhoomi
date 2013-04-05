@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ARCloud.h"
-#import "AREvents.h"
+#import "AREvent.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <QuartzCore/QuartzCore.h>
 
@@ -24,7 +24,7 @@
    
   
 }
-@property(nonatomic,retain)AREvents *event;
+@property(nonatomic,retain)AREvent *event;
 @property(nonatomic,retain) MPMoviePlayerController *movie;
 -(void)loadNewEvent;
 @end

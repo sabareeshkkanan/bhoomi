@@ -17,7 +17,7 @@
     if(self)
     {
         bound=dimension;
-        tableViewController=[[TableViewController alloc] init];
+        tableViewController=[[EventsViewController alloc] init];
         navigationController=[[UINavigationController alloc] initWithRootViewController:tableViewController];
         
         data=[[SensorData alloc] init];

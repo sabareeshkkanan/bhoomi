@@ -10,7 +10,7 @@
 #import "DetailViewController.h"
 #import "Landmark.h"
 
-@interface TableViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface EventsViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *tableView;
     Landmark* theQuad;

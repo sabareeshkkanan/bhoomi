@@ -11,34 +11,27 @@
 @implementation ARPointInPolygon
 
   
--(double)vertx:(int)i
+-(double)vx:(int)i  //returns latitude of the coordinate i in the array
 {
-    return [[[quad objectAtIndex:i] point] coordinate].latitude;
+    return [[[landmark objectAtIndex:i] point] coordinate].latitude;
 }
--(double)verty:(int)i
+-(double)vy:(int)i   //returns longitude of the coordinate i in the array
 {
-    return [[[quad objectAtIndex:i] point] coordinate].longitude;
-}
--(double)testx
-{
-    return [pt coordinate].latitude;
-}
--(double)testy
-{
-    return [pt coordinate].longitude;
+    return [[[landmark objectAtIndex:i] point] coordinate].longitude;
 }
 
-
--(BOOL)pnpoly:(NSArray*)quadI :(CLLocation*)ptI
+-(BOOL)pnpoly:(NSArray*)landmarkI :(CLLocation*)userLocation
 {
-    quad=quadI;pt=ptI;
-    int i,j,c=0,nvert=[quad count];
+    landmark=landmarkI;
+    double x=[userLocation coordinate].latitude;  
+    double y=[userLocation coordinate].longitude;
+    int i,j,c=0;
+    int nvert=[landmark count]; // nvert number of vertices in the polygon
     for(i=0,j=nvert-1;i<nvert;j=i++){
-        if ( (([self verty:i]>[self testy]) != ([self verty:j]>[self testy])) &&
-            ([self testx] < ([self vertx:j]-[self vertx:i]) * ([self testy]-[self verty:i]) / ([self verty:j]-[self verty:i]) + [self vertx:i]) )
+        if ( (([self vy:i]>y) != ([self vy:j]>y)) &&
+            (x < ([self vx:j]-[self vx:i]) * (y-[self vy:i]) / ([self vy:j]-[self vy:i]) + [self vx:i]) )
             c = !c;
     }
-       
     return c;
 }
 

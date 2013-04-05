@@ -14,6 +14,8 @@
 
 @interface ARCloud : NSObject{
     NSMutableData *responseData;
+    NSData *jsonData;
+    NSURL *requestUrl;
     int refe;
     __weak id<CloudResponse> delegate;
 }

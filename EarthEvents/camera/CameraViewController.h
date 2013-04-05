@@ -2,7 +2,7 @@
 #import <AVFoundation/AVFoundation.h>
 
 @protocol frameDelegate;
-@interface Camera : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate> {
+@interface CameraViewController : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate> {
     AVCaptureVideoDataOutput *videoOutput;
 }
 

@@ -17,20 +17,27 @@
 
 - (void)requestwithArray:(NSMutableDictionary*)json : (NSString*)url
 {
-    NSURL *myURL = [NSURL URLWithString:url];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:myURL cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:60];
-    [request setHTTPMethod:@"POST"];
+    
+    requestUrl = [NSURL URLWithString:url];
+   
+   
     NSString *uid=[NSString stringWithFormat:@"%@",[UIDevice currentDevice].identifierForVendor.UUIDString];
     [json setObject:uid forKey:@"uid"];
-      NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:0 error:nil];
+      jsonData = [NSJSONSerialization dataWithJSONObject:json options:0 error:nil];
+    [self postRequest];
+}
+-(void)postRequest
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:20];
+     [request setHTTPMethod:@"POST"];
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:[NSString stringWithFormat:@"%d", [jsonData length]] forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody: jsonData];
-   // NSLog(@"%@",json);
-   (void) [[NSURLConnection alloc] initWithRequest:request delegate:self];
-   
+    // NSLog(@"%@",json);
+    (void) [[NSURLConnection alloc] initWithRequest:request delegate:self];
+
 }
 -(void)request:(NSString*)url : (int)ref{
     refe=ref;
@@ -52,15 +59,26 @@
 {
     NSLog(@"%@",error);
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No network connection"
-                                                    message:@"You must be connected to the internet to use this app."
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
+                                                    message:@"You must be connected to the internet to use this app. Do you want to retry ?"
+                                                   delegate:self
+                                          cancelButtonTitle:@"NO"
+                                          otherButtonTitles:@"YES",nil];
     [alert show];
+   
+    
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     [delegate OnDownload:responseData:refe];
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(jsonData)
+    {   if(buttonIndex==1)
+        [self postRequest];
+        else
+            exit(0);
+    }
 }
 @end

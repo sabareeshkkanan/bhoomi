@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 DreamPowers. All rights reserved.
 //
 
-#import "AREvents.h"
+#import "AREvent.h"
 
-@implementation AREvents
+@implementation AREvent
 @synthesize name,alt,user,_startDate,_endDate,media,notes,eventType;
 @synthesize sortDate,_description,dates,location;
 -(id)initwithArray:(NSArray*)data

@@ -1,7 +1,7 @@
-#import "Camera.h"
+#import "CameraViewController.h"
 
 
-@implementation Camera
+@implementation CameraViewController
 
 @synthesize captureSession;
 @synthesize previewLayer;

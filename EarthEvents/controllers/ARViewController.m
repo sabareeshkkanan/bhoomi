@@ -38,7 +38,7 @@
 
 -(void)setcamera
 {
-    [self setCaptureManager:[[Camera alloc] init]];
+    [self setCaptureManager:[[CameraViewController alloc] init]];
     [[self captureManager] preview];
     CGRect layerRect = [[[self view] layer] bounds];
     [[[self captureManager] previewLayer] setBounds:layerRect];

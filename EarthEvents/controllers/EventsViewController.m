@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 DreamPowers. All rights reserved.
 //
 
-#import "TableViewController.h"
+#import "EventsViewController.h"
 
-@interface TableViewController ()
+@interface EventsViewController ()
 
 @end
 
-@implementation TableViewController
+@implementation EventsViewController
 @synthesize tableView,theQuad;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -93,9 +93,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(!empty){
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    DetailViewController *newView=[[DetailViewController alloc] init];
-    [newView setEvent:[[theQuad events] objectAtIndex:indexPath.row]];
-    [self.navigationController pushViewController:newView animated:YES];
+    DetailViewController *detailView=[[DetailViewController alloc] init];
+    [detailView setEvent:[[theQuad events] objectAtIndex:indexPath.row]];
+    [self.navigationController pushViewController:detailView animated:YES];
     }
 }
 -(void)removeView:(id)sender

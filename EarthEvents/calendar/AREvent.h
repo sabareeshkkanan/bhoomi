@@ -9,7 +9,7 @@
 #import "ARMedia.h"
 #import <EventKit/EventKit.h>
 
-@interface AREvents : NSObject
+@interface AREvent : NSObject
 
 @property(strong) NSString *name,*alt,*user,*notes,*eventType;
 @property(nonatomic,retain) NSDate *_startDate,*_endDate;

@@ -11,8 +11,8 @@
 
 @interface ARPointInPolygon : NSObject
 {
-    NSArray *quad;
-    CLLocation *pt;
+    NSArray *landmark;
+  
 }
 -(BOOL)pnpoly : (NSArray*)quadI : (CLLocation*)ptI ;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "Oracle.h"
-#import "TableViewController.h"
+#import "EventsViewController.h"
 #import "GLViewController.h"
 #import "GLView.h"
 
@@ -32,7 +32,7 @@
 @property(nonatomic,retain)SensorData *data;
 
 @property(nonatomic,retain) UINavigationController *navigationController;
-@property(nonatomic,retain) TableViewController *tableViewController;
+@property(nonatomic,retain) EventsViewController *tableViewController;
 
 @property (nonatomic, retain) GLViewController *controller;
 @property (nonatomic, retain) GLView *glView ;

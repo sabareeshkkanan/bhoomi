@@ -11,6 +11,10 @@
 @implementation Landmark
 @synthesize AltName,LocationName,LocationType,user,events,finalResult,Q_id;
 @synthesize button,delegate,minimumdistance,state;
+const float boxWidth=160.0;
+const float boxHeight=80.0;
+
+
 
 -(void)setvalue:(NSArray*)points
 {
@@ -29,6 +33,9 @@
    
 }
 -(id)initwithdata:(NSArray*) data{
+    
+    
+    
     [self setQ_id:[[data valueForKey:@"_id"] valueForKey:@"$id"]];
     [self setvalue:[data valueForKey:@"Location"]];
     
@@ -54,7 +61,7 @@
 -(void)populateEvents:(NSArray*)data{
     for(NSArray* obj in data)
     {
-        AREvents *eve=[[AREvents alloc] initwithArray:obj];
+        AREvent *eve=[[AREvent alloc] initwithArray:obj];
         [events addObject:eve];
     }
 }
@@ -64,10 +71,12 @@
         for(NSString* tag in AltName)
         {
             if([obj valueForKey:@"location"])
-            if([tag hasPrefix:[obj valueForKey:@"location"]])
+                if([[obj valueForKey:@"location"] rangeOfString:tag].location!=NSNotFound)
+                {   [events addObject:[[AREvent alloc] initwithEKEvent:obj]]; break;}
+        /*    if([tag hasPrefix:[obj valueForKey:@"location"]])
             {
-                [events addObject:[[AREvents alloc] initwithEKEvent:obj]];
-            }
+                [events addObject:[[AREvent alloc] initwithEKEvent:obj]];
+            }*/
         
         }
     }
@@ -177,19 +186,19 @@
 {
     if([state intValue]>0)
     {
-       
-        float range=[LargestAngle floatValue]+45;
+        button.hidden=NO;
+        float range=[LargestAngle floatValue]+45; // 45 is the viewing angle of camera 
         float average=(a1+a2)/2;
         average+=range/2;
-        float factor=768/range;
-        float avran=average*factor;
-        avran-=70;
-       buttonX=[NSNumber numberWithFloat:(avran)];
+        float factor=([UIScreen mainScreen].bounds.size.width+boxWidth)/range;
+        float X=average*factor;
+        X-=boxWidth;
+       buttonX=[NSNumber numberWithFloat:(X)];
        
     }
            else
     {
-        buttonX=[NSNumber numberWithFloat:-200];
+        button.hidden=YES;
     }
 }
 -(void)buttonPriority:(int)y
@@ -197,12 +206,12 @@
     NSString *distance_=[NSString stringWithFormat:@"%.2f",[minimumdistance floatValue]];
     distance_=[distance_ stringByAppendingString:@" meters to"];
     if(!InsideQuad){
-        button.frame=CGRectMake([buttonX floatValue], y, 160, 80);
+        button.frame=CGRectMake([buttonX floatValue], y, boxWidth, boxHeight);
         if(button.layer.borderColor==[[UIColor orangeColor] CGColor])
           [self buttonlayer: [[UIColor darkGrayColor] CGColor]];
     }
     else
-    {  button.frame=CGRectMake(540, 50, 160, 80);
+    {  button.frame=CGRectMake(540, 50, boxWidth, boxHeight);
         distance_=@"You are inside ";
         [self buttonlayer:[[UIColor orangeColor]CGColor]];
     }

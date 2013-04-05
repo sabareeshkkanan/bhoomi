@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "630FC27F1621E52800942E4A"
-               BuildableName = "Earth Events.app"
+               BuildableName = "AR Events.app"
                BlueprintName = "Earth Events"
-               ReferencedContainer = "container:EarthEvents.xcodeproj">
+               ReferencedContainer = "container:AREvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "630FC27F1621E52800942E4A"
-            BuildableName = "Earth Events.app"
+            BuildableName = "AR Events.app"
             BlueprintName = "Earth Events"
-            ReferencedContainer = "container:EarthEvents.xcodeproj">
+            ReferencedContainer = "container:AREvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "630FC27F1621E52800942E4A"
-            BuildableName = "Earth Events.app"
+            BuildableName = "AR Events.app"
             BlueprintName = "Earth Events"
-            ReferencedContainer = "container:EarthEvents.xcodeproj">
+            ReferencedContainer = "container:AREvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "630FC27F1621E52800942E4A"
-            BuildableName = "Earth Events.app"
+            BuildableName = "AR Events.app"
             BlueprintName = "Earth Events"
-            ReferencedContainer = "container:EarthEvents.xcodeproj">
+            ReferencedContainer = "container:AREvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

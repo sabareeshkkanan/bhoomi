@@ -7,7 +7,7 @@
 //
 
 #import "Location.h"
-#import "AREvents.h"
+#import "AREvent.h"
 #import "landmarkState.h"
 #import "ARPointInPolygon.h"
 #import <EventKit/EventKit.h>
