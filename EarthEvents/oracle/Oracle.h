@@ -4,7 +4,7 @@
 //
 //  Created by sabareesh kkanan subramani on 11/19/12.
 //  Copyright (c) 2012 DreamPowers. All rights reserved.
-//
+// Important class that keeps the information upto location. Please check the report for more information
 
 #import "Sensors.h"
 #import "ARCloud.h"
@@ -18,7 +18,7 @@
 {
    
     ARCloud *cloud;
-    SensorData *PreviousData;
+    CLLocation *PreviousData;
     NSMutableDictionary *data;
     __weak id<CloudUpdate> delegate;
     NSString *url;
@@ -29,5 +29,5 @@
 @property NSMutableArray *places;
 -(void)setDelegate:(id<CloudUpdate>)delegate;
 @property (nonatomic,retain) Sensors *sensors;;
-
+-(void)forceUpdate;
 @end

@@ -194,6 +194,10 @@ const float boxHeight=80.0;
         float X=average*factor;
         X-=boxWidth;
        buttonX=[NSNumber numberWithFloat:(X)];
+       /* if([LocationName isEqualToString:@"Science Hall 2"])
+        {
+            NSLog(@",%f,%f,%f,%f,%f,%f,%f,%f,%f",a1,a2,[LargestAngle floatValue],range,average-range/2,average,factor,X+boxWidth,X);
+        }*/
        
     }
            else
@@ -211,7 +215,9 @@ const float boxHeight=80.0;
           [self buttonlayer: [[UIColor darkGrayColor] CGColor]];
     }
     else
-    {  button.frame=CGRectMake(540, 50, boxWidth, boxHeight);
+    {
+        button.hidden=NO;
+        button.frame=CGRectMake(540, 50, boxWidth, boxHeight);
         distance_=@"You are inside ";
         [self buttonlayer:[[UIColor orangeColor]CGColor]];
     }

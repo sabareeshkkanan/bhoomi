@@ -4,7 +4,7 @@
 //
 //  Created by sabareesh kkanan subramani on 11/19/12.
 //  Copyright (c) 2012 DreamPowers. All rights reserved.
-//
+// Before working on this class understand delegate in ios
 
 #import "Oracle.h"
 
@@ -18,7 +18,7 @@
     sensors=[[Sensors alloc] init];
    
     sensordata=[[SensorData alloc]init];
-    PreviousData=[[SensorData alloc]init];
+    PreviousData=[[CLLocation alloc]init];
     places=[[NSMutableArray alloc] init];
     data=[[NSMutableDictionary alloc] init];
     [sensors start];
@@ -27,7 +27,12 @@
     
     url=@"https://ar.seedspirit.com/query/query.php";
     
-    
+    [NSTimer scheduledTimerWithTimeInterval:300.0
+                                     target:self
+                                   selector:@selector(check)
+                                   userInfo:nil
+                                    repeats:YES];
+
     return self;
 }
 
@@ -36,15 +41,6 @@
     if([self IsUpdateRequired]){
         [self poll];
     }
-    else{
-        [NSTimer scheduledTimerWithTimeInterval:10.0
-                                         target:self
-                                       selector:@selector(check)
-                                       userInfo:nil
-                                        repeats:NO];
-
-    }
- 
 }
 
 -(void)poll{
@@ -59,28 +55,33 @@
                                        repeats:NO];
 
    }else{
-    
+    PreviousData=[[sensors update] gps];
     [json setObject:[NSArray arrayWithObjects:[self DtoNum:[sensordata lng]],[self DtoNum:[sensordata lat]], nil] forKey:@"Location"];
        [json setObject:@"1000" forKey:@"range"];
         [cloud requestwithArray:json:url];
-       PreviousData=[sensors update];
-       [self check];
        
    }
   
 }
--(void)OnDownload:(NSData *)thedata :(int)url
-{
-   NSLog(@"%@",[[NSString alloc] initWithData:thedata encoding:NSUTF8StringEncoding]);
-    data=[NSJSONSerialization JSONObjectWithData:thedata options:0 error:nil];
-  
-    [self createQuad:data];
-}
+
 -(BOOL)IsUpdateRequired{
-   
-    if([[sensordata gps] distanceFromLocation:[PreviousData gps]]>100)
+
+    if([[sensordata gps] distanceFromLocation:PreviousData]>500)
         return true;
     return false;
+}
+-(void)forceUpdate{
+    [self check];
+}
+
+
+
+-(void)OnDownload:(NSData *)thedata :(int)url
+{
+    //  NSLog(@"%@",[[NSString alloc] initWithData:thedata encoding:NSUTF8StringEncoding]);
+    data=[NSJSONSerialization JSONObjectWithData:thedata options:0 error:nil];
+    
+    [self createQuad:data];
 }
 -(NSNumber*)DtoNum:(double)val
 {

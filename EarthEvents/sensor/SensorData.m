@@ -4,7 +4,7 @@
 //
 //  Created by sabareesh kkanan subramani on 11/16/12.
 //  Copyright (c) 2012 DreamPowers. All rights reserved.
-//
+//  SensorData model . Class Sensors populates this model with current sensor data when ever it is requested.
 
 #import "SensorData.h"
 

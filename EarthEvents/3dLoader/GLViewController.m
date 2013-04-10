@@ -117,35 +117,24 @@
  
 }
 -(void)CalculateTranslation:(OpenGLWaveFrontObject*) object{
-    float scale;
-    float horizontal;
-    float hDifference;
-    float vertical;
-
-    
+    float scale,horizontal,hDifference,vertical;
+    //Depth
     if([object.GPSposition Distance_]>50)
         object.display=FALSE;
     else
         object.display=TRUE;
-    
     scale =-[object.GPSposition Distance_]/2;
     if(scale>-5)
         scale=-5;
-  //  scale=-25;
-    //fusion
+    //HoriZontal
     float convert=[self rtd:([senseData.attitude roll]*-1)];
-    if(convert<0)
-        convert=360+convert;
-    
-    //
-    
+       if(convert<0)
+    convert+=360;
     [object.GPSposition calculateDifference:convert];
     hDifference=[object.GPSposition Difference_];
-    
-    
     horizontal=scale/3.7584;
     horizontal=horizontal*(hDifference/22.5)*-1;
-    
+    //Vertical
     vertical=scale/2.77777;
     float z=[self rtd:[senseData.RealAttitude pitch]];
     z=z*1.12;
@@ -153,13 +142,9 @@
     z=z*2.77;
     if(senseData.Acceleration.acceleration.z>0)
         z=z*-1;
-    
     vertical=vertical*z;
-           Vertex3D position=Vertex3DMake(horizontal,vertical, scale);
+    Vertex3D position=Vertex3DMake(horizontal,vertical, scale);
     object.currentPosition=position;
-        
-    
-   
 }
 -(float) rtd:(float) radians
 {

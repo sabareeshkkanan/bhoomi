@@ -42,17 +42,7 @@ const double radconst=1.57079633;
 -(double) tAngle:(CLLocation*) point1 :(CLLocation*)point2
 {
     double ang=[self tOpposite:point1 :point2]/[self tAdjacent:point1 :point2];
-   
-    double YDifY1=fabs([point1 coordinate].latitude-[point2 coordinate].latitude) ;
-    
-    double XDifX1=fabs([point1 coordinate].longitude-[point2 coordinate].longitude);
-    //ghghg
    ang=atan(ang);
-  //  ang=[self rtd:ang];
-  //  ang=XDifX1/sqrt((XDifX1*XDifX1)+ (YDifY1*YDifY1));
- //   ang=XDifX1/YDifY1;
- //   ang=atan(ang);
-   // ang=[self rtd:ang];
     return ang;
 }
 -(float) quadcalc:(CLLocation*) point1 :(CLLocation*)point2

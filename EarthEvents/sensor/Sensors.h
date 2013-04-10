@@ -18,6 +18,8 @@
     float               updatedHeading;
     CMAttitude *refattitude;
     SensorData *data;
+    CLLocation *simLocation;
+    BOOL sim;
 }
 @property (nonatomic, retain) CLLocationManager	*locationManager;
 @property (nonatomic, retain) CMMotionManager     *motionManager;
@@ -28,7 +30,8 @@
 -(void)start;
 -(void)stop;
 -(SensorData*) update;
-
+-(void)simulate:(double)lat :(double)lng;
+-(void)dontSimulate;
 
 @end
 

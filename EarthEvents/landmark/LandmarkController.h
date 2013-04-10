@@ -4,7 +4,8 @@
 //
 //  Created by sabareesh kkanan subramani on 11/24/12.
 //  Copyright (c) 2012 DreamPowers. All rights reserved.
-//
+//// Before working on this class understand delegate in ios
+
 
 #import "Oracle.h"
 #import "EventsViewController.h"
@@ -25,6 +26,9 @@
    
     UIView *wrapperView;
     UIView *buttonsView;
+    UIWebView *webView;
+    UIButton *map;
+    UIButton *headingBu;
    
 }
 @property UIView *wrapperView;

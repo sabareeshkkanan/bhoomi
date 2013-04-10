@@ -4,7 +4,7 @@
 //
 //  Created by sabareesh kkanan subramani on 11/16/12.
 //  Copyright (c) 2012 DreamPowers. All rights reserved.
-//
+// This is complicated class which does core functionality in identifying a landmark in users view. 
 
 #import "Location.h"
 #import "AREvent.h"
@@ -28,6 +28,7 @@
     UIButton *button;
     NSNumber *buttonX;
     BOOL InsideQuad;
+    
     
 }
 @property(nonatomic,weak)id<buttonEvent> delegate;
